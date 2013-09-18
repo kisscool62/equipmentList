@@ -1,0 +1,2605 @@
+2013-09-17 23:30:31,575 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2013-09-17 23:31:32,324 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-09-17 23:31:34,109 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6fjc48dh5 - Internal server error, for (GET) [/products] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:462) ~[play-jdbc_2.10.jar:2.1.3]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:483) ~[play-jdbc_2.10.jar:2.1.3]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:439) ~[play-jdbc_2.10.jar:2.1.3]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:437) ~[play-jdbc_2.10.jar:2.1.3]
+	at scala.collection.immutable.List.foreach(List.scala:309) ~[scala-library.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:437) ~[play-jdbc_2.10.jar:2.1.3]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:68) ~[play_2.10.jar:2.1.3]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:68) ~[play_2.10.jar:2.1.3]
+	at scala.collection.immutable.List.foreach(List.scala:309) ~[scala-library.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:68) ~[play_2.10.jar:2.1.3]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:68) ~[play_2.10.jar:2.1.3]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:68) ~[play_2.10.jar:2.1.3]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.1.3]
+	at play.api.Play$.start(Play.scala:67) ~[play_2.10.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:141) ~[play_2.10.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:114) ~[play_2.10.jar:2.1.3]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:114) ~[play_2.10.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) ~[play_2.10.jar:2.1.3]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:523) ~[scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:112) ~[play_2.10.jar:2.1.3]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.1.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.7.0_03]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.7.0_03]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_03]
+
+2013-09-17 23:33:28,342 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-09-17 23:33:28,566 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-09-17 23:34:05,839 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Starting to upload inventory in Excel mode
+
+2013-09-17 23:34:07,747 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Upload inventory in Excel mode done
+
+2013-09-17 23:34:07,748 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Saving uploaded products
+
+2013-09-17 23:34:07,748 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Begin saving 97 products
+
+2013-09-17 23:34:07,748 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Table de réunion', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,767 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: null
+
+2013-09-17 23:34:07,790 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: Category{name='Bureau'}
+
+2013-09-17 23:34:07,792 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: null
+
+2013-09-17 23:34:07,794 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,796 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: null
+
+2013-09-17 23:34:07,798 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,799 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Table de réunion', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,824 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,824 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Tréteau VIKA ARTUR ', description='Hêtre', quantity=6, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=22.5, usdPrice=null}
+
+2013-09-17 23:34:07,829 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: Category{name='Bureau'}
+
+2013-09-17 23:34:07,830 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: Category{name='Bureau'}
+
+2013-09-17 23:34:07,834 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,836 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,837 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,838 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,838 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Tréteau VIKA ARTUR ', description='Hêtre', quantity=6, remaining_quantity=6, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=22.5, usdPrice=null}
+
+2013-09-17 23:34:07,845 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,846 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Plateau VIKA AMON', description='Motif Bouleau', quantity=2, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=29.9, usdPrice=null}
+
+2013-09-17 23:34:07,846 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: Category{name='Bureau'}
+
+2013-09-17 23:34:07,848 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: Category{name='Bureau'}
+
+2013-09-17 23:34:07,849 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,850 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,851 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,853 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,856 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Plateau VIKA AMON', description='Motif Bouleau', quantity=2, remaining_quantity=2, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=29.9, usdPrice=null}
+
+2013-09-17 23:34:07,858 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,858 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Chaise'}, brand=Brand{name='Ikea'}, name='Chaise bureau Torkel', description='null', quantity=5, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=55.0, usdPrice=null}
+
+2013-09-17 23:34:07,860 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Chaise: null
+
+2013-09-17 23:34:07,862 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Chaise: Category{name='Chaise'}
+
+2013-09-17 23:34:07,863 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,865 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,866 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,866 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,866 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Chaise'}, brand=Brand{name='Ikea'}, name='Chaise bureau Torkel', description='null', quantity=5, remaining_quantity=5, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=55.0, usdPrice=null}
+
+2013-09-17 23:34:07,866 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,871 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Chaise'}, brand=Brand{name='Ikea'}, name='Chaise bureau Markus', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=179.0, usdPrice=null}
+
+2013-09-17 23:34:07,871 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Chaise: Category{name='Chaise'}
+
+2013-09-17 23:34:07,871 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Chaise: Category{name='Chaise'}
+
+2013-09-17 23:34:07,872 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,872 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,872 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,873 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,873 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Chaise'}, brand=Brand{name='Ikea'}, name='Chaise bureau Markus', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=179.0, usdPrice=null}
+
+2013-09-17 23:34:07,873 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,876 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Plateau VIKA AMON', description='null', quantity=1, remaining_quantity=null, owner='Chabanne', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=0.0, usdPrice=null}
+
+2013-09-17 23:34:07,876 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: Category{name='Bureau'}
+
+2013-09-17 23:34:07,876 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: Category{name='Bureau'}
+
+2013-09-17 23:34:07,877 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,877 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,878 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,880 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,880 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Plateau VIKA AMON', description='null', quantity=1, remaining_quantity=1, owner='Chabanne', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=0.0, usdPrice=null}
+
+2013-09-17 23:34:07,881 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,881 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Vieux bureau avec retour', description='null', quantity=1, remaining_quantity=null, owner='Laurent', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=0.0, usdPrice=null}
+
+2013-09-17 23:34:07,887 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: Category{name='Bureau'}
+
+2013-09-17 23:34:07,890 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Bureau: Category{name='Bureau'}
+
+2013-09-17 23:34:07,890 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,890 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,891 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,891 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Ikea: Brand{name='Ikea'}
+
+2013-09-17 23:34:07,891 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Bureau'}, brand=Brand{name='Ikea'}, name='Vieux bureau avec retour', description='null', quantity=1, remaining_quantity=1, owner='Laurent', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=0.0, usdPrice=null}
+
+2013-09-17 23:34:07,896 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,897 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=Brand{name='Red Bull'}, name='Frigo Cannette', description='null', quantity=1, remaining_quantity=null, owner='RedBull', room='Espace Créa', location='null', state='Ampoules HS', dateOfPurchase=null, euroPrice=0.0, usdPrice=null}
+
+2013-09-17 23:34:07,898 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: null
+
+2013-09-17 23:34:07,899 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: Category{name='Electromenager'}
+
+2013-09-17 23:34:07,900 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,901 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,902 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Red Bull: null
+
+2013-09-17 23:34:07,902 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Red Bull: Brand{name='Red Bull'}
+
+2013-09-17 23:34:07,903 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=Brand{name='Red Bull'}, name='Frigo Cannette', description='null', quantity=1, remaining_quantity=1, owner='RedBull', room='Espace Créa', location='null', state='Ampoules HS', dateOfPurchase=null, euroPrice=0.0, usdPrice=null}
+
+2013-09-17 23:34:07,904 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,904 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=Brand{name='Electrolux'}, name='Frigo Cuisine', description='null', quantity=1, remaining_quantity=null, owner='Marchalant', room='Cuisine', location='null', state='OK', dateOfPurchase=null, euroPrice=0.0, usdPrice=null}
+
+2013-09-17 23:34:07,904 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: Category{name='Electromenager'}
+
+2013-09-17 23:34:07,906 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: Category{name='Electromenager'}
+
+2013-09-17 23:34:07,906 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,907 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,907 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Electrolux: null
+
+2013-09-17 23:34:07,908 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Electrolux: Brand{name='Electrolux'}
+
+2013-09-17 23:34:07,909 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=Brand{name='Electrolux'}, name='Frigo Cuisine', description='null', quantity=1, remaining_quantity=1, owner='Marchalant', room='Cuisine', location='null', state='OK', dateOfPurchase=null, euroPrice=0.0, usdPrice=null}
+
+2013-09-17 23:34:07,910 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,911 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=Brand{name='Krups'}, name='Nescafé Dolce Gusto', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Cuisine', location='null', state='OK', dateOfPurchase=null, euroPrice=79.35, usdPrice=null}
+
+2013-09-17 23:34:07,912 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: Category{name='Electromenager'}
+
+2013-09-17 23:34:07,912 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: Category{name='Electromenager'}
+
+2013-09-17 23:34:07,915 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,915 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,916 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Krups: null
+
+2013-09-17 23:34:07,916 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Krups: Brand{name='Krups'}
+
+2013-09-17 23:34:07,916 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=Brand{name='Krups'}, name='Nescafé Dolce Gusto', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Cuisine', location='null', state='OK', dateOfPurchase=null, euroPrice=79.35, usdPrice=null}
+
+2013-09-17 23:34:07,931 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,931 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=null, name='Four Micro Onde', description='null', quantity=1, remaining_quantity=null, owner='Mini', room='Cuisine', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,932 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: Category{name='Electromenager'}
+
+2013-09-17 23:34:07,933 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: Category{name='Electromenager'}
+
+2013-09-17 23:34:07,933 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,934 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,940 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=null, name='Four Micro Onde', description='null', quantity=1, remaining_quantity=1, owner='Mini', room='Cuisine', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,940 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,940 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=Brand{name='Delhongi'}, name='Machine a café', description='null', quantity=1, remaining_quantity=null, owner='Mini', room='Cuisine', location='null', state='Broc HS', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,941 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: Category{name='Electromenager'}
+
+2013-09-17 23:34:07,941 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Electromenager: Category{name='Electromenager'}
+
+2013-09-17 23:34:07,941 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,941 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MOBILIER: EquipmentType{name='MOBILIER'}
+
+2013-09-17 23:34:07,942 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Delhongi: null
+
+2013-09-17 23:34:07,942 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Delhongi: Brand{name='Delhongi'}
+
+2013-09-17 23:34:07,943 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MOBILIER'}, category=Category{name='Electromenager'}, brand=Brand{name='Delhongi'}, name='Machine a café', description='null', quantity=1, remaining_quantity=1, owner='Mini', room='Cuisine', location='null', state='Broc HS', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,944 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,945 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Appareil Photo'}, brand=Brand{name='Canon'}, name='EOS 5D Mark II', description='null', quantity=1, remaining_quantity=null, owner='Joffres', room='Studio', location='null', state='A réviser', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,945 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Appareil Photo: null
+
+2013-09-17 23:34:07,948 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Appareil Photo: Category{name='Appareil Photo'}
+
+2013-09-17 23:34:07,949 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: null
+
+2013-09-17 23:34:07,950 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,950 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: null
+
+2013-09-17 23:34:07,951 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,952 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Appareil Photo'}, brand=Brand{name='Canon'}, name='EOS 5D Mark II', description='null', quantity=1, remaining_quantity=1, owner='Joffres', room='Studio', location='null', state='A réviser', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,952 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,954 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Appareil Photo'}, brand=Brand{name='Canon'}, name='EOS 5D Mark III', description='null', quantity=1, remaining_quantity=null, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=3290.0, usdPrice=null}
+
+2013-09-17 23:34:07,954 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Appareil Photo: Category{name='Appareil Photo'}
+
+2013-09-17 23:34:07,955 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Appareil Photo: Category{name='Appareil Photo'}
+
+2013-09-17 23:34:07,955 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,956 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,956 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,957 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,957 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Appareil Photo'}, brand=Brand{name='Canon'}, name='EOS 5D Mark III', description='null', quantity=1, remaining_quantity=1, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=3290.0, usdPrice=null}
+
+2013-09-17 23:34:07,959 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,959 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Appareil Photo'}, brand=Brand{name='Canon'}, name='EOS 5D Mark II', description='null', quantity=1, remaining_quantity=null, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,960 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Appareil Photo: Category{name='Appareil Photo'}
+
+2013-09-17 23:34:07,960 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Appareil Photo: Category{name='Appareil Photo'}
+
+2013-09-17 23:34:07,961 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,962 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,967 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,967 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,967 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Appareil Photo'}, brand=Brand{name='Canon'}, name='EOS 5D Mark II', description='null', quantity=1, remaining_quantity=1, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,969 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,971 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 16-35mm f/2.8L II USM', description='null', quantity=1, remaining_quantity=null, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=1490.0, usdPrice=null}
+
+2013-09-17 23:34:07,971 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: null
+
+2013-09-17 23:34:07,973 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:07,974 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,975 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,976 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,976 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,976 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 16-35mm f/2.8L II USM', description='null', quantity=1, remaining_quantity=1, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=1490.0, usdPrice=null}
+
+2013-09-17 23:34:07,978 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,978 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 24-105mm f/4L IS USM', description='null', quantity=1, remaining_quantity=null, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,981 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:07,982 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:07,982 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,982 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,983 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,983 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,983 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 24-105mm f/4L IS USM', description='null', quantity=1, remaining_quantity=1, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:07,983 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,984 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 24-70mm f/2.8L II USM', description='null', quantity=1, remaining_quantity=null, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=2390.0, usdPrice=null}
+
+2013-09-17 23:34:07,985 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:07,985 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:07,986 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,986 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,986 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,988 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,988 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 24-70mm f/2.8L II USM', description='null', quantity=1, remaining_quantity=1, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=2390.0, usdPrice=null}
+
+2013-09-17 23:34:07,990 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,990 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 70-200mm f/2.8L USM', description='null', quantity=1, remaining_quantity=null, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=1260.0, usdPrice=null}
+
+2013-09-17 23:34:07,990 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:07,991 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:07,992 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,992 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:07,992 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,996 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:07,996 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 70-200mm f/2.8L USM', description='null', quantity=1, remaining_quantity=1, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=1260.0, usdPrice=null}
+
+2013-09-17 23:34:07,997 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:07,997 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 50mm f/1.4 USM', description='null', quantity=1, remaining_quantity=null, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=379.0, usdPrice=null}
+
+2013-09-17 23:34:07,998 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,000 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,001 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,001 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,001 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,001 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,001 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 50mm f/1.4 USM', description='null', quantity=1, remaining_quantity=1, owner='Sogélease', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=379.0, usdPrice=null}
+
+2013-09-17 23:34:08,002 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,003 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 50mm f/1.4 USM', description='null', quantity=1, remaining_quantity=null, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,003 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,003 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,004 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,006 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,006 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,006 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,006 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 50mm f/1.4 USM', description='null', quantity=1, remaining_quantity=1, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,007 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,011 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 100mm f/2.8L Macro IS USM', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=642.98, usdPrice=null}
+
+2013-09-17 23:34:08,011 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,011 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,012 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,012 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,012 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,013 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,013 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 100mm f/2.8L Macro IS USM', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=642.98, usdPrice=null}
+
+2013-09-17 23:34:08,013 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,015 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 100mm f/2 USM', description='null', quantity=1, remaining_quantity=null, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,016 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,016 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,016 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,016 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,016 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,017 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,017 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 100mm f/2 USM', description='null', quantity=1, remaining_quantity=1, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,018 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,018 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 24-70mm f/2.8L USM', description='null', quantity=1, remaining_quantity=null, owner='Joffres', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,020 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,020 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,021 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,022 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,022 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,022 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,023 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 24-70mm f/2.8L USM', description='null', quantity=1, remaining_quantity=1, owner='Joffres', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,023 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,027 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 20-35mm f/2,8', description='null', quantity=1, remaining_quantity=null, owner='Joffres', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,027 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,027 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,028 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,028 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,029 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,030 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,030 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Canon'}, name='EF 20-35mm f/2,8', description='null', quantity=1, remaining_quantity=1, owner='Joffres', room='Studio', location='Peli 1', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,031 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,031 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Samyang'}, name='14mm f/2,8', description='null', quantity=1, remaining_quantity=null, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,031 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,033 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Objectif: Category{name='Objectif'}
+
+2013-09-17 23:34:08,033 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,033 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,034 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Samyang: null
+
+2013-09-17 23:34:08,035 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Samyang: Brand{name='Samyang'}
+
+2013-09-17 23:34:08,036 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Objectif'}, brand=Brand{name='Samyang'}, name='14mm f/2,8', description='null', quantity=1, remaining_quantity=1, owner='Périnelle', room='Studio', location='Etagère 3', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,036 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,037 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Apple'}, name='Cinema Display 23"', description='null', quantity=2, remaining_quantity=null, owner='Chabanne', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=300.0, usdPrice=null}
+
+2013-09-17 23:34:08,038 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: null
+
+2013-09-17 23:34:08,038 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,040 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,042 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,042 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Apple: null
+
+2013-09-17 23:34:08,043 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Apple: Brand{name='Apple'}
+
+2013-09-17 23:34:08,043 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Apple'}, name='Cinema Display 23"', description='null', quantity=2, remaining_quantity=2, owner='Chabanne', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=300.0, usdPrice=null}
+
+2013-09-17 23:34:08,043 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,044 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Apple'}, name='MacBook Pro 15"', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=3218.0, usdPrice=null}
+
+2013-09-17 23:34:08,045 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,045 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,047 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,047 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,048 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Apple: Brand{name='Apple'}
+
+2013-09-17 23:34:08,050 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Apple: Brand{name='Apple'}
+
+2013-09-17 23:34:08,050 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Apple'}, name='MacBook Pro 15"', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=3218.0, usdPrice=null}
+
+2013-09-17 23:34:08,053 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,053 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='LaCie'}, name='Lacie DD 2BIG Quadra 4To', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=549.0, usdPrice=null}
+
+2013-09-17 23:34:08,054 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,055 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,056 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,056 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,056 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name LaCie: null
+
+2013-09-17 23:34:08,056 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name LaCie: Brand{name='LaCie'}
+
+2013-09-17 23:34:08,058 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='LaCie'}, name='Lacie DD 2BIG Quadra 4To', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=549.0, usdPrice=null}
+
+2013-09-17 23:34:08,058 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,061 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Kessler'}, name='Pocket Dolly V2 Kit Philippe Bloom', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=1350.0, usdPrice=null}
+
+2013-09-17 23:34:08,061 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: null
+
+2013-09-17 23:34:08,062 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,062 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,062 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,063 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Kessler: null
+
+2013-09-17 23:34:08,064 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Kessler: Brand{name='Kessler'}
+
+2013-09-17 23:34:08,064 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Kessler'}, name='Pocket Dolly V2 Kit Philippe Bloom', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=1350.0, usdPrice=null}
+
+2013-09-17 23:34:08,068 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,068 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Leatherman'}, name='Leatherman', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=61.94}
+
+2013-09-17 23:34:08,070 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,070 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,071 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,075 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,075 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Leatherman: null
+
+2013-09-17 23:34:08,076 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Leatherman: Brand{name='Leatherman'}
+
+2013-09-17 23:34:08,076 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Leatherman'}, name='Leatherman', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=61.94}
+
+2013-09-17 23:34:08,077 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,078 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Super Clamp', description='null', quantity=2, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=26.99}
+
+2013-09-17 23:34:08,079 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,080 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,080 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,080 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,084 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: null
+
+2013-09-17 23:34:08,084 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,084 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Super Clamp', description='null', quantity=2, remaining_quantity=2, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=26.99}
+
+2013-09-17 23:34:08,085 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,085 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Magic Arm', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=159.95}
+
+2013-09-17 23:34:08,085 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,086 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,087 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,089 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,090 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,090 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,090 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Magic Arm', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=159.95}
+
+2013-09-17 23:34:08,091 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,091 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte SDHC', description='16Go Extreme Pro', quantity=3, remaining_quantity=null, owner='Sogélease', room='Espace Créa', location='Tiroir Rose', state='OK', dateOfPurchase=null, euroPrice=73.0, usdPrice=null}
+
+2013-09-17 23:34:08,092 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,092 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,093 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,095 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,095 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: null
+
+2013-09-17 23:34:08,096 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,096 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte SDHC', description='16Go Extreme Pro', quantity=3, remaining_quantity=3, owner='Sogélease', room='Espace Créa', location='Tiroir Rose', state='OK', dateOfPurchase=null, euroPrice=73.0, usdPrice=null}
+
+2013-09-17 23:34:08,096 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,097 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Hoya'}, name='Filtre UV', description='82mm', quantity=2, remaining_quantity=null, owner='Sogélease', room='null', location='null', state='OK', dateOfPurchase=null, euroPrice=109.0, usdPrice=null}
+
+2013-09-17 23:34:08,098 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: null
+
+2013-09-17 23:34:08,098 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,100 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,101 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,101 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Hoya: null
+
+2013-09-17 23:34:08,102 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Hoya: Brand{name='Hoya'}
+
+2013-09-17 23:34:08,102 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Hoya'}, name='Filtre UV', description='82mm', quantity=2, remaining_quantity=2, owner='Sogélease', room='null', location='null', state='OK', dateOfPurchase=null, euroPrice=109.0, usdPrice=null}
+
+2013-09-17 23:34:08,108 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,109 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Sennheiser'}, name='EW122P G3 MICRO CRAVATE EMETEUR', description='null', quantity=2, remaining_quantity=null, owner='Sogélease', room='Espace Créa', location='Malette HF - étagère', state='OK', dateOfPurchase=null, euroPrice=579.0, usdPrice=null}
+
+2013-09-17 23:34:08,109 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: null
+
+2013-09-17 23:34:08,112 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,113 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,113 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,113 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sennheiser: null
+
+2013-09-17 23:34:08,115 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sennheiser: Brand{name='Sennheiser'}
+
+2013-09-17 23:34:08,115 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Sennheiser'}, name='EW122P G3 MICRO CRAVATE EMETEUR', description='null', quantity=2, remaining_quantity=2, owner='Sogélease', room='Espace Créa', location='Malette HF - étagère', state='OK', dateOfPurchase=null, euroPrice=579.0, usdPrice=null}
+
+2013-09-17 23:34:08,116 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,116 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=Brand{name='Eurolight'}, name='Mini LED CN-240CH DIMER 3200-5400', description='null', quantity=1, remaining_quantity=null, owner='Sogélease', room='Espace Créa', location='Etagère', state='OK', dateOfPurchase=null, euroPrice=229.0, usdPrice=null}
+
+2013-09-17 23:34:08,117 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: null
+
+2013-09-17 23:34:08,118 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,119 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,119 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,120 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Eurolight: null
+
+2013-09-17 23:34:08,122 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Eurolight: Brand{name='Eurolight'}
+
+2013-09-17 23:34:08,122 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=Brand{name='Eurolight'}, name='Mini LED CN-240CH DIMER 3200-5400', description='null', quantity=1, remaining_quantity=1, owner='Sogélease', room='Espace Créa', location='Etagère', state='OK', dateOfPurchase=null, euroPrice=229.0, usdPrice=null}
+
+2013-09-17 23:34:08,122 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,122 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Canon'}, name='ACCU LP-E6 POUR EOS 5 MK II / 7D', description='null', quantity=4, remaining_quantity=null, owner='Sogélease', room='Espace Créa', location='Tiroir', state='OK', dateOfPurchase=null, euroPrice=69.0, usdPrice=null}
+
+2013-09-17 23:34:08,123 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,124 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,125 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,126 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,126 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,126 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,126 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Canon'}, name='ACCU LP-E6 POUR EOS 5 MK II / 7D', description='null', quantity=4, remaining_quantity=4, owner='Sogélease', room='Espace Créa', location='Tiroir', state='OK', dateOfPurchase=null, euroPrice=69.0, usdPrice=null}
+
+2013-09-17 23:34:08,127 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,129 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Tilta'}, name='DSLR RIG CROSSE', description='null', quantity=1, remaining_quantity=null, owner='Sogélease', room='Studio', location='Peli 2', state='OK', dateOfPurchase=null, euroPrice=1080.0, usdPrice=null}
+
+2013-09-17 23:34:08,130 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,130 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,130 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,130 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,131 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Tilta: null
+
+2013-09-17 23:34:08,132 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Tilta: Brand{name='Tilta'}
+
+2013-09-17 23:34:08,132 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Tilta'}, name='DSLR RIG CROSSE', description='null', quantity=1, remaining_quantity=1, owner='Sogélease', room='Studio', location='Peli 2', state='OK', dateOfPurchase=null, euroPrice=1080.0, usdPrice=null}
+
+2013-09-17 23:34:08,133 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,135 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Hoya'}, name='FILTRE UV PRO 1 DIGITAL 77mm', description='77mm', quantity=1, remaining_quantity=null, owner='Sogélease', room='null', location='null', state='OK', dateOfPurchase=null, euroPrice=85.0, usdPrice=null}
+
+2013-09-17 23:34:08,136 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,136 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,136 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,136 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,139 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Hoya: Brand{name='Hoya'}
+
+2013-09-17 23:34:08,139 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Hoya: Brand{name='Hoya'}
+
+2013-09-17 23:34:08,140 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Hoya'}, name='FILTRE UV PRO 1 DIGITAL 77mm', description='77mm', quantity=1, remaining_quantity=1, owner='Sogélease', room='null', location='null', state='OK', dateOfPurchase=null, euroPrice=85.0, usdPrice=null}
+
+2013-09-17 23:34:08,140 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,141 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Hoya'}, name='FILTRE UV PRO 1 DIGITAL 58mm', description='58mm', quantity=1, remaining_quantity=null, owner='Sogélease', room='null', location='null', state='OK', dateOfPurchase=null, euroPrice=50.01, usdPrice=null}
+
+2013-09-17 23:34:08,141 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,151 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,152 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,152 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,153 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Hoya: Brand{name='Hoya'}
+
+2013-09-17 23:34:08,159 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Hoya: Brand{name='Hoya'}
+
+2013-09-17 23:34:08,159 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Hoya'}, name='FILTRE UV PRO 1 DIGITAL 58mm', description='58mm', quantity=1, remaining_quantity=1, owner='Sogélease', room='null', location='null', state='OK', dateOfPurchase=null, euroPrice=50.01, usdPrice=null}
+
+2013-09-17 23:34:08,160 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,161 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Rotule Video Plateau', description='701 HDV', quantity=1, remaining_quantity=null, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=115.0, usdPrice=null}
+
+2013-09-17 23:34:08,162 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,162 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,163 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,166 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,166 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,166 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,166 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Rotule Video Plateau', description='701 HDV', quantity=1, remaining_quantity=1, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=115.0, usdPrice=null}
+
+2013-09-17 23:34:08,167 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,167 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Synology'}, name='DS1512+', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=643.77, usdPrice=null}
+
+2013-09-17 23:34:08,168 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,169 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,169 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,169 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,170 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Synology: null
+
+2013-09-17 23:34:08,174 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Synology: Brand{name='Synology'}
+
+2013-09-17 23:34:08,174 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Synology'}, name='DS1512+', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=643.77, usdPrice=null}
+
+2013-09-17 23:34:08,174 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,174 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Western Digital'}, name='Caviar Green', description='3Tb', quantity=6, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=137.92, usdPrice=null}
+
+2013-09-17 23:34:08,175 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,178 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,179 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,179 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,179 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Western Digital: null
+
+2013-09-17 23:34:08,180 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Western Digital: Brand{name='Western Digital'}
+
+2013-09-17 23:34:08,180 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Western Digital'}, name='Caviar Green', description='3Tb', quantity=6, remaining_quantity=6, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=137.92, usdPrice=null}
+
+2013-09-17 23:34:08,180 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,181 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Netgear'}, name='Switch', description='GS105', quantity=2, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=20.43, usdPrice=null}
+
+2013-09-17 23:34:08,182 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,182 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,182 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,182 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,183 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Netgear: null
+
+2013-09-17 23:34:08,184 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Netgear: Brand{name='Netgear'}
+
+2013-09-17 23:34:08,185 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Netgear'}, name='Switch', description='GS105', quantity=2, remaining_quantity=2, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=20.43, usdPrice=null}
+
+2013-09-17 23:34:08,185 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,186 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Motorola'}, name='Talkie Walkie', description='T8', quantity=2, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Malette TW', state='OK', dateOfPurchase=null, euroPrice=69.9, usdPrice=null}
+
+2013-09-17 23:34:08,187 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,187 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,187 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,189 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,189 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Motorola: null
+
+2013-09-17 23:34:08,190 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Motorola: Brand{name='Motorola'}
+
+2013-09-17 23:34:08,190 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Motorola'}, name='Talkie Walkie', description='T8', quantity=2, remaining_quantity=2, owner='TLMALP', room='Espace Créa', location='Malette TW', state='OK', dateOfPurchase=null, euroPrice=69.9, usdPrice=null}
+
+2013-09-17 23:34:08,192 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,193 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Pelican'}, name='Pelicase 1560', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=350.0, usdPrice=null}
+
+2013-09-17 23:34:08,194 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,194 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,196 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,196 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,196 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Pelican: null
+
+2013-09-17 23:34:08,197 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Pelican: Brand{name='Pelican'}
+
+2013-09-17 23:34:08,198 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Pelican'}, name='Pelicase 1560', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=350.0, usdPrice=null}
+
+2013-09-17 23:34:08,199 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,199 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Motorola'}, name='Oreillettes', description='null', quantity=4, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Malette TW', state='OK', dateOfPurchase=null, euroPrice=19.9, usdPrice=null}
+
+2013-09-17 23:34:08,199 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,203 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,203 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,203 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,204 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Motorola: Brand{name='Motorola'}
+
+2013-09-17 23:34:08,204 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Motorola: Brand{name='Motorola'}
+
+2013-09-17 23:34:08,204 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Motorola'}, name='Oreillettes', description='null', quantity=4, remaining_quantity=4, owner='TLMALP', room='Espace Créa', location='Malette TW', state='OK', dateOfPurchase=null, euroPrice=19.9, usdPrice=null}
+
+2013-09-17 23:34:08,204 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,204 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Malette'}, name='Malette transport', description='null', quantity=3, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=29.9, usdPrice=null}
+
+2013-09-17 23:34:08,205 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,205 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,206 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,206 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,206 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Malette: null
+
+2013-09-17 23:34:08,209 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Malette: Brand{name='Malette'}
+
+2013-09-17 23:34:08,209 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Malette'}, name='Malette transport', description='null', quantity=3, remaining_quantity=3, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=29.9, usdPrice=null}
+
+2013-09-17 23:34:08,210 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,210 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Western Digital'}, name='Red', description='3Tb', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=136.08, usdPrice=null}
+
+2013-09-17 23:34:08,211 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,212 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,212 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,214 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,214 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Western Digital: Brand{name='Western Digital'}
+
+2013-09-17 23:34:08,214 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Western Digital: Brand{name='Western Digital'}
+
+2013-09-17 23:34:08,215 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Western Digital'}, name='Red', description='3Tb', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=136.08, usdPrice=null}
+
+2013-09-17 23:34:08,228 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,228 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='LCDVF'}, name='Videur LCD', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=119.0, usdPrice=null}
+
+2013-09-17 23:34:08,229 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,229 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,230 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,230 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,231 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name LCDVF: null
+
+2013-09-17 23:34:08,235 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name LCDVF: Brand{name='LCDVF'}
+
+2013-09-17 23:34:08,235 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='LCDVF'}, name='Videur LCD', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=119.0, usdPrice=null}
+
+2013-09-17 23:34:08,236 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,238 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Hoya'}, name='FILTRE UV PRO 1 DIGITAL 82mm', description='82mm', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=99.0, usdPrice=null}
+
+2013-09-17 23:34:08,239 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,239 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,240 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,241 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,242 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Hoya: Brand{name='Hoya'}
+
+2013-09-17 23:34:08,242 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Hoya: Brand{name='Hoya'}
+
+2013-09-17 23:34:08,242 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Hoya'}, name='FILTRE UV PRO 1 DIGITAL 82mm', description='82mm', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=99.0, usdPrice=null}
+
+2013-09-17 23:34:08,242 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,243 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Netgear'}, name='Switch', description='8 ports', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=33.35, usdPrice=null}
+
+2013-09-17 23:34:08,244 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,246 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,246 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,246 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,247 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Netgear: Brand{name='Netgear'}
+
+2013-09-17 23:34:08,247 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Netgear: Brand{name='Netgear'}
+
+2013-09-17 23:34:08,247 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Netgear'}, name='Switch', description='8 ports', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=33.35, usdPrice=null}
+
+2013-09-17 23:34:08,248 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,249 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Kensington'}, name='Cable de sécurité', description='null', quantity=2, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Tiroir du bas pepino', state='OK', dateOfPurchase=null, euroPrice=32.61, usdPrice=null}
+
+2013-09-17 23:34:08,250 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,250 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,252 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,252 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,252 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Kensington: null
+
+2013-09-17 23:34:08,253 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Kensington: Brand{name='Kensington'}
+
+2013-09-17 23:34:08,254 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Kensington'}, name='Cable de sécurité', description='null', quantity=2, remaining_quantity=2, owner='TLMALP', room='Espace Créa', location='Tiroir du bas pepino', state='OK', dateOfPurchase=null, euroPrice=32.61, usdPrice=null}
+
+2013-09-17 23:34:08,255 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,255 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Epson'}, name='Imprimante SX535', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=187.6, usdPrice=null}
+
+2013-09-17 23:34:08,255 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,257 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,257 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,257 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,258 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Epson: null
+
+2013-09-17 23:34:08,259 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Epson: Brand{name='Epson'}
+
+2013-09-17 23:34:08,259 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Epson'}, name='Imprimante SX535', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=187.6, usdPrice=null}
+
+2013-09-17 23:34:08,262 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,262 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='GP'}, name='Chargeur Pile + 4 piles', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Bureau Maillard', state='OK', dateOfPurchase=null, euroPrice=93.23, usdPrice=null}
+
+2013-09-17 23:34:08,263 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,263 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,264 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,265 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,266 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name GP: null
+
+2013-09-17 23:34:08,266 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name GP: Brand{name='GP'}
+
+2013-09-17 23:34:08,267 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='GP'}, name='Chargeur Pile + 4 piles', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Bureau Maillard', state='OK', dateOfPurchase=null, euroPrice=93.23, usdPrice=null}
+
+2013-09-17 23:34:08,267 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,268 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Marshall'}, name='Moniteur LCD 7"', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=499.0, usdPrice=null}
+
+2013-09-17 23:34:08,269 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,271 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,272 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,272 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,272 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Marshall: null
+
+2013-09-17 23:34:08,272 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Marshall: Brand{name='Marshall'}
+
+2013-09-17 23:34:08,273 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Marshall'}, name='Moniteur LCD 7"', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=499.0, usdPrice=null}
+
+2013-09-17 23:34:08,273 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,274 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Zoom'}, name='Micro H1', description='null', quantity=2, remaining_quantity=null, owner='TLMALP / PEPINO', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=113.93, usdPrice=null}
+
+2013-09-17 23:34:08,275 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,275 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,275 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,277 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,277 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Zoom: null
+
+2013-09-17 23:34:08,278 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Zoom: Brand{name='Zoom'}
+
+2013-09-17 23:34:08,278 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Zoom'}, name='Micro H1', description='null', quantity=2, remaining_quantity=2, owner='TLMALP / PEPINO', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=113.93, usdPrice=null}
+
+2013-09-17 23:34:08,279 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,279 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Apple'}, name='Adaptateur Ethernet', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=24.25, usdPrice=null}
+
+2013-09-17 23:34:08,280 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,281 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,282 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,282 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,282 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Apple: Brand{name='Apple'}
+
+2013-09-17 23:34:08,283 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Apple: Brand{name='Apple'}
+
+2013-09-17 23:34:08,283 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Apple'}, name='Adaptateur Ethernet', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=24.25, usdPrice=null}
+
+2013-09-17 23:34:08,284 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,286 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Apple'}, name='Adaptateur FireWire', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=24.25, usdPrice=null}
+
+2013-09-17 23:34:08,286 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,286 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,287 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,288 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,288 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Apple: Brand{name='Apple'}
+
+2013-09-17 23:34:08,289 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Apple: Brand{name='Apple'}
+
+2013-09-17 23:34:08,289 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Apple'}, name='Adaptateur FireWire', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=24.25, usdPrice=null}
+
+2013-09-17 23:34:08,291 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,291 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Vanguard'}, name='Sac Photo', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=99.0, usdPrice=null}
+
+2013-09-17 23:34:08,292 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,292 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,292 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,293 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,293 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Vanguard: null
+
+2013-09-17 23:34:08,294 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Vanguard: Brand{name='Vanguard'}
+
+2013-09-17 23:34:08,295 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Vanguard'}, name='Sac Photo', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='null', state='OK', dateOfPurchase=null, euroPrice=99.0, usdPrice=null}
+
+2013-09-17 23:34:08,296 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,296 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte Compact Flash', description='32Go ', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=159.0, usdPrice=null}
+
+2013-09-17 23:34:08,297 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,298 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,298 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,298 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,299 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,303 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,303 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte Compact Flash', description='32Go ', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=159.0, usdPrice=null}
+
+2013-09-17 23:34:08,305 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,306 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Bras magique', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Etagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,308 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,309 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,309 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,311 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,312 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,312 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,312 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Bras magique', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Etagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,312 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,312 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=Brand{name='Interfit'}, name='DIFFUSEUR LUMIERE', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,313 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,313 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,314 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,314 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,315 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Interfit: null
+
+2013-09-17 23:34:08,317 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Interfit: Brand{name='Interfit'}
+
+2013-09-17 23:34:08,317 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=Brand{name='Interfit'}, name='DIFFUSEUR LUMIERE', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,318 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,318 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='PIEDS LUMIERES', description='null', quantity=7, remaining_quantity=null, owner='TLMALP', room='Studio', location='à coté du serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,318 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,319 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,320 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,320 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,320 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='PIEDS LUMIERES', description='null', quantity=7, remaining_quantity=7, owner='TLMALP', room='Studio', location='à coté du serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,320 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,323 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='LIGHT PANEL', description='null', quantity=2, remaining_quantity=null, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,324 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,324 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,324 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,324 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,324 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='LIGHT PANEL', description='null', quantity=2, remaining_quantity=2, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,325 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,326 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='LAMPE CONTINUE', description='null', quantity=2, remaining_quantity=null, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,326 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,326 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,327 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,329 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,329 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='LAMPE CONTINUE', description='null', quantity=2, remaining_quantity=2, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,329 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,330 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=Brand{name='Elinchrome'}, name='FLASH', description='null', quantity=2, remaining_quantity=null, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,330 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,331 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,331 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,331 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,332 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Elinchrome: null
+
+2013-09-17 23:34:08,335 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Elinchrome: Brand{name='Elinchrome'}
+
+2013-09-17 23:34:08,335 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=Brand{name='Elinchrome'}, name='FLASH', description='null', quantity=2, remaining_quantity=2, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,336 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,336 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='BOLS FLASH', description='null', quantity=2, remaining_quantity=null, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,336 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,337 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,338 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,338 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,338 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='BOLS FLASH', description='null', quantity=2, remaining_quantity=2, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,338 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,339 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='NID D'ABEILLE', description='null', quantity=2, remaining_quantity=null, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,340 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,340 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,340 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,342 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,342 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='NID D'ABEILLE', description='null', quantity=2, remaining_quantity=2, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,346 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,346 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='GELATINE', description='null', quantity=null, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='prêt du radiateur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,347 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,350 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,351 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,351 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,351 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='GELATINE', description='null', quantity=null, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='prêt du radiateur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,352 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,353 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='BALLES DE TENNIS / PINCES A LINGE', description='null', quantity=null, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='prêt du radiateur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,353 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,354 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,355 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,355 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,355 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='BALLES DE TENNIS / PINCES A LINGE', description='null', quantity=null, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='prêt du radiateur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,355 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,358 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='CABLES SECTEUR', description='null', quantity=null, remaining_quantity=null, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,358 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,358 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,359 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,359 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,359 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=null, name='CABLES SECTEUR', description='null', quantity=null, remaining_quantity=null, owner='TLMALP', room='Studio', location='sur le serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,359 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,360 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=null, name='Fonds', description='null', quantity=10, remaining_quantity=null, owner='TLMALP', room='Studio', location='contre le mur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,361 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,361 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,362 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,363 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,363 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=null, name='Fonds', description='null', quantity=10, remaining_quantity=10, owner='TLMALP', room='Studio', location='contre le mur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,364 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,366 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Elinchrome'}, name='Pieds / Fixations', description='null', quantity=2, remaining_quantity=null, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,367 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,367 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,368 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,369 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,369 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Elinchrome: Brand{name='Elinchrome'}
+
+2013-09-17 23:34:08,371 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Elinchrome: Brand{name='Elinchrome'}
+
+2013-09-17 23:34:08,371 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Elinchrome'}, name='Pieds / Fixations', description='null', quantity=2, remaining_quantity=2, owner='TLMALP', room='Studio', location='null', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,372 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,372 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte Compact Flash', description='16Go', quantity=3, remaining_quantity=null, owner='Périnelle', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,373 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,373 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,373 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,375 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,376 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,376 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,376 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte Compact Flash', description='16Go', quantity=3, remaining_quantity=3, owner='Périnelle', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,376 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,376 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Kessler'}, name='Slider', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='à gauche de l'étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,377 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,378 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,378 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,378 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,379 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Kessler: Brand{name='Kessler'}
+
+2013-09-17 23:34:08,381 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Kessler: Brand{name='Kessler'}
+
+2013-09-17 23:34:08,382 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Kessler'}, name='Slider', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='à gauche de l'étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,382 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,382 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Bilora'}, name='Trépied Photo', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Studio', location='à coté du serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,383 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,383 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,384 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,384 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,384 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Bilora: null
+
+2013-09-17 23:34:08,384 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Bilora: Brand{name='Bilora'}
+
+2013-09-17 23:34:08,386 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Bilora'}, name='Trépied Photo', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Studio', location='à coté du serveur', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,386 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,386 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Trépied Photo', description='null', quantity=2, remaining_quantity=null, owner='TLMALP/PEPINO', room='null', location='à gauche de l'étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,387 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,389 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,389 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,389 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,390 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,390 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,390 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Trépied Photo', description='null', quantity=2, remaining_quantity=2, owner='TLMALP/PEPINO', room='null', location='à gauche de l'étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,391 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,391 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=Brand{name='Aurora'}, name='MINI LIGHT PANEL', description='null', quantity=1, remaining_quantity=null, owner='MAILLARD', room='Espace Créa', location='Etagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,392 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,393 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Lumière: Category{name='Lumière'}
+
+2013-09-17 23:34:08,393 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,394 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,394 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Aurora: null
+
+2013-09-17 23:34:08,396 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Aurora: Brand{name='Aurora'}
+
+2013-09-17 23:34:08,396 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Lumière'}, brand=Brand{name='Aurora'}, name='MINI LIGHT PANEL', description='null', quantity=1, remaining_quantity=1, owner='MAILLARD', room='Espace Créa', location='Etagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,396 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,397 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Rode'}, name='Pèrche', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='à gauche de l'étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,397 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,400 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,400 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,400 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,401 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Rode: null
+
+2013-09-17 23:34:08,407 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Rode: Brand{name='Rode'}
+
+2013-09-17 23:34:08,407 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Rode'}, name='Pèrche', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='à gauche de l'étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,409 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,410 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Rode'}, name='Blimp', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Etagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,410 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,411 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,411 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,411 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,412 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Rode: Brand{name='Rode'}
+
+2013-09-17 23:34:08,416 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Rode: Brand{name='Rode'}
+
+2013-09-17 23:34:08,417 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Rode'}, name='Blimp', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Etagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,417 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,417 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Rode'}, name='Micro canon', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,418 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,421 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,422 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,422 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,422 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Rode: Brand{name='Rode'}
+
+2013-09-17 23:34:08,422 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Rode: Brand{name='Rode'}
+
+2013-09-17 23:34:08,422 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Rode'}, name='Micro canon', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,424 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,424 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=null, name='Clap', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,425 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,427 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,428 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,428 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,428 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=null, name='Clap', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,428 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,429 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Edirol'}, name='Mixette', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,429 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,430 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,432 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,433 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,433 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Edirol: null
+
+2013-09-17 23:34:08,436 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Edirol: Brand{name='Edirol'}
+
+2013-09-17 23:34:08,436 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='Edirol'}, name='Mixette', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,437 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,437 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='JVC'}, name='Micro canon', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,437 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,437 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,438 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,438 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,439 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name JVC: null
+
+2013-09-17 23:34:08,440 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name JVC: Brand{name='JVC'}
+
+2013-09-17 23:34:08,441 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=Brand{name='JVC'}, name='Micro canon', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,441 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,441 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=null, name='Cables XLR', description='null', quantity=3, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,442 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,444 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,445 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,445 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,445 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=null, name='Cables XLR', description='null', quantity=3, remaining_quantity=3, owner='TLMALP', room='Espace Créa', location='Malette son - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,453 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,453 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=null, name='Cables Jack', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Malette HF - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,455 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,455 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Son: Category{name='Son'}
+
+2013-09-17 23:34:08,455 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,458 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,465 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Son'}, brand=null, name='Cables Jack', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Malette HF - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,467 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,467 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte Compact Flash', description='8Go', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,468 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,470 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,471 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,473 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,475 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,478 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,478 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte Compact Flash', description='8Go', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,487 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,488 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte Compact Flash', description='4Go', quantity=2, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,489 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,489 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,490 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,490 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,491 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,491 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,491 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte Compact Flash', description='4Go', quantity=2, remaining_quantity=2, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,502 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,502 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='TakeMS'}, name='Carte Compact Flash', description='1Go', quantity=2, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,503 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,506 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,507 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,509 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,510 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name TakeMS: null
+
+2013-09-17 23:34:08,511 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name TakeMS: Brand{name='TakeMS'}
+
+2013-09-17 23:34:08,511 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='TakeMS'}, name='Carte Compact Flash', description='1Go', quantity=2, remaining_quantity=2, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,515 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,515 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte SD', description='32Go', quantity=2, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,516 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,516 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,517 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,526 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,527 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,527 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,527 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte SD', description='32Go', quantity=2, remaining_quantity=2, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,528 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,528 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte SD', description='16Go', quantity=4, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,529 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,529 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Informatique: Category{name='Informatique'}
+
+2013-09-17 23:34:08,531 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,531 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,532 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,539 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Sandisk: Brand{name='Sandisk'}
+
+2013-09-17 23:34:08,539 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Informatique'}, brand=Brand{name='Sandisk'}, name='Carte SD', description='16Go', quantity=4, remaining_quantity=4, owner='TLMALP', room='Espace Créa', location='Tiroir droite - meuble noir', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,540 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,543 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Canon'}, name='Flash Cobra', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Table', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,543 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,543 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,544 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,544 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,544 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,545 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Canon: Brand{name='Canon'}
+
+2013-09-17 23:34:08,545 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Canon'}, name='Flash Cobra', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Table', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,551 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,551 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Manfrotto'}, name='Pinces', description='null', quantity=2, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Petit sac photo - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,552 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,556 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,557 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,557 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,564 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,564 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,564 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Manfrotto'}, name='Pinces', description='null', quantity=2, remaining_quantity=2, owner='TLMALP', room='Espace Créa', location='Petit sac photo - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,564 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,565 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Kinotehnik'}, name='Oeilton 5D', description='null', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Petit sac photo - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,565 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,565 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Accessoire: Category{name='Accessoire'}
+
+2013-09-17 23:34:08,566 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,566 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,567 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Kinotehnik: null
+
+2013-09-17 23:34:08,577 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Kinotehnik: Brand{name='Kinotehnik'}
+
+2013-09-17 23:34:08,577 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Accessoire'}, brand=Brand{name='Kinotehnik'}, name='Oeilton 5D', description='null', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Petit sac photo - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,577 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,577 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Try to create product : Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Rotule Video ', description='496RC2', quantity=1, remaining_quantity=null, owner='TLMALP', room='Espace Créa', location='Petit sac photo - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,578 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,578 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Category for name Machinerie: Category{name='Machinerie'}
+
+2013-09-17 23:34:08,579 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,583 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found EquipmentType for name MATERIEL: EquipmentType{name='MATERIEL'}
+
+2013-09-17 23:34:08,584 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,591 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+Found 4 Brand for name Manfrotto: Brand{name='Manfrotto'}
+
+2013-09-17 23:34:08,591 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product: Product{id=null, type=EquipmentType{name='MATERIEL'}, category=Category{name='Machinerie'}, brand=Brand{name='Manfrotto'}, name='Rotule Video ', description='496RC2', quantity=1, remaining_quantity=1, owner='TLMALP', room='Espace Créa', location='Petit sac photo - étagère', state='OK', dateOfPurchase=null, euroPrice=null, usdPrice=null}
+
+2013-09-17 23:34:08,591 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,591 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Product saved
+
+2013-09-17 23:34:08,591 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+Uploaded products saved
+

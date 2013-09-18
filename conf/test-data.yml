@@ -1,0 +1,5 @@
+- !!models.Product
+    name:       BobLeSupperProduit
+- !!models.Product
+    name:       OuaisUnProduit2
+...
