@@ -37,7 +37,7 @@ public class Application extends Controller {
     public static Result products(int page, String sortBy, String order, String filter) {
         return ok(
             index.render(
-                Product.page(page, 10, sortBy, order, filter),
+                Product.page(page, 20, sortBy, order, filter),
                 sortBy, order, filter
             )
         );
