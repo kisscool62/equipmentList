@@ -10,7 +10,7 @@ import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
 import views.html.category;
-import views.html.index;
+import views.html.product;
 import views.html.typeOfEquipment;
 
 import java.io.File;
@@ -75,9 +75,9 @@ public class Application extends Controller {
      */
     public static Result products(int page, String sortBy, String order, String filter) {
         return ok(
-            index.render(
-                Product.page(page, 20, sortBy, order, filter),
-                sortBy, order, filter
+            product.render(
+                    Product.page(page, 20, sortBy, order, filter),
+                    sortBy, order, filter
             )
         );
     }

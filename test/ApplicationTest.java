@@ -19,7 +19,7 @@ public class ApplicationTest {
     
     @Test
     public void renderTemplate() {
-//        Content html = views.html.index.render(Lists.<Product>newArrayList());
+//        Content html = views.html.product.render(Lists.<Product>newArrayList());
 //        assertThat(contentType(html)).isEqualTo("text/html");
 //        assertThat(contentAsString(html)).contains("Your new application is ready.");
     }
