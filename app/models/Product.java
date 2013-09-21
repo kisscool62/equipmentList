@@ -154,11 +154,11 @@ public class Product extends Model {
     }
 
     /**
-     * Return a page of computer
+     * Return a page of products
      *
      * @param page Page to display
      * @param pageSize Number of computers per page
-     * @param sortBy Computer property used for sorting
+     * @param sortBy Product property used for sorting
      * @param order Sort order (either or asc or desc)
      * @param filter Filter applied on the name column
      */

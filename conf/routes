@@ -20,3 +20,10 @@ POST        /products                     controllers.Application.newProduct()
 POST        /products/:id                 controllers.Application.editProduct(id: Long)
 POST        /products/:id/delete          controllers.Application.deleteProduct(id: Long)
 POST        /upload                       controllers.Application.upload()
+
+#Categories
+# Products
+GET         /categories                     controllers.Application.categories(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+POST        /categories                     controllers.Application.newCategory()
+POST        /categories/:id                 controllers.Application.editCategory(id: String)
+POST        /categories/:id/delete          controllers.Application.deleteCategory(id: String)

@@ -1,5 +1,6 @@
 package models;
 
+import com.avaje.ebean.Page;
 import play.Logger;
 import play.db.ebean.Model;
 
@@ -28,6 +29,24 @@ public class Category extends Model {
         return "Category{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+
+    /**
+     * Return a page of categories
+     *
+     * @param page Page to display
+     * @param pageSize Number of categories per page
+     * @param sortBy Category property used for sorting
+     * @param order Sort order (either or asc or desc)
+     * @param filter Filter applied on the name column
+     */
+    public static Page<Category> page(int page, int pageSize, String sortBy, String order, String filter) {
+        return
+            find.where()
+                .ilike("name", "%" + filter + "%")
+                .orderBy(sortBy + " " + order)
+                .findPagingList(pageSize)
+                .getPage(page);
     }
 
     public static Category findOrCreate(String categoryName){

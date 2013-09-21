@@ -1,12 +1,14 @@
 package controllers;
 
 import helpers.excel.ProductUploader;
+import models.Category;
 import models.Product;
 import play.Logger;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
+import views.html.category;
 import views.html.index;
 
 import java.io.File;
@@ -27,12 +29,30 @@ public class Application extends Controller {
     }
 
     /**
-     * Display the paginated list of computers.
+     * Display the paginated list of categories.
      *
      * @param page Current page number (starts from 0)
      * @param sortBy Column to be sorted
      * @param order Sort order (either asc or desc)
-     * @param filter Filter applied on computer names
+     * @param filter Filter applied on category names
+     */
+    public static Result categories(int page, String sortBy, String order, String filter) {
+        return ok(
+            category.render(
+                    Category.page(page, 20, sortBy, order, filter),
+                    sortBy, order, filter
+            )
+        );
+    }
+
+
+    /**
+     * Display the paginated list of products.
+     *
+     * @param page Current page number (starts from 0)
+     * @param sortBy Column to be sorted
+     * @param order Sort order (either asc or desc)
+     * @param filter Filter applied on product names
      */
     public static Result products(int page, String sortBy, String order, String filter) {
         return ok(
@@ -91,12 +111,24 @@ public class Application extends Controller {
         return Results.TODO;
     }
 
+    public static Result newCategory() {
+        return Results.TODO;
+    }
+
     public static Result editProduct(Long id) {
         return Results.TODO;
     }
 
 
     public static Result deleteProduct(long id) {
+        return Results.TODO;
+    }
+
+    public static Result editCategory(String id) {
+        return Results.TODO;
+    }
+
+    public static Result deleteCategory(String id) {
         return Results.TODO;
     }
 }

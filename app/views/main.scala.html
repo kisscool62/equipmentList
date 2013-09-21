@@ -11,6 +11,12 @@
         <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
     </head>
     <body>
+        <nav>
+            <a href="#@routes.Application.categories(0, "name", "asc", "")">Categories</a> |
+            <a href="#@routes.Application.products(0, "name", "asc", "")">Products</a> |
+            <a href="#@routes.Application.products(0, "name", "asc", "")">Products</a> |
+            <a href="#@routes.Application.products(0, "name", "asc", "")">Products</a>
+        </nav>
         @content
     </body>
 </html>
