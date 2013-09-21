@@ -1,4 +1,4 @@
-@(currentPage: com.avaje.ebean.Page[Product], currentSortBy: String, currentOrder: String, currentFilter: String)
+@(currentPage: com.avaje.ebean.Page[TypeOfEquipment], currentSortBy: String, currentOrder: String, currentFilter: String)
 
     @****************************************
     * Helper generating navigation links    *
@@ -22,7 +22,7 @@
         }
 
         // Generate the link
-        routes.Application.products(newPage, sortBy, order, currentFilter)
+        routes.Application.typesOfEquipment(newPage, sortBy, order, currentFilter)
 
     }
 
@@ -36,7 +36,7 @@
     }
 @main("Don't forget your equipment!!") {
 
-    <h1 id="homeTitle">@Messages("products.list.title", currentPage.getTotalRowCount)</h1>
+    <h1 id="homeTitle">@Messages("typesOfEquipment.list.title", currentPage.getTotalRowCount)</h1>
 
         @if(flash.containsKey("success")) {
             <div class="alert-message warning">
@@ -47,11 +47,11 @@
         <div id="actions">
 
             <form action="@link(0, "name")" method="GET">
-                <input type="search" id="searchbox" name="f" value="@currentFilter" placeholder="Filter by product name...">
+                <input type="search" id="searchbox" name="f" value="@currentFilter" placeholder="Filter by type name...">
                 <input type="submit" id="searchsubmit" value="Filter by name" class="btn primary">
             </form>
 
-            <a class="btn success" id="add" href="@routes.Application.newProduct()">Add a new product</a>
+            <a class="btn success" id="add" href="@routes.Application.newTypeOfEquipment()">Add a new type of equipment</a>
 
         </div>
 
@@ -66,18 +66,14 @@
             <table class="computers zebra-striped">
                 <thead>
                     <tr>
-                        @header("name", "Product name")
-                        @header("typeOfEquipment.name", "Type")
-                        @header("category.name", "Category")
+                        @header("name", "Type name")
                     </tr>
                 </thead>
                 <tbody>
 
-                    @for(product <- currentPage.getList) {
+                    @for(typeOfEquipment <- currentPage.getList) {
                         <tr>
-                            <td><a href="@routes.Application.editProduct(product.id)">@product.name</a></td>
-                            <td><a href="@routes.Application.editProduct(product.id)">@product.typeOfEquipment.name</a></td>
-                            <td><a href="@routes.Application.editProduct(product.id)">@product.category.name</a></td>
+                            <td><a href="@routes.Application.editTypeOfEquipment(typeOfEquipment.name)">@typeOfEquipment.name</a></td>
                         </tr>
                     }
 
@@ -112,12 +108,4 @@
 
         }
 
-    @helper.form(action = routes.Application.upload, 'enctype -> "multipart/form-data") {
-
-        <input type="file" name="inventory">
-        <p>
-            <input type="submit">
-        </p>
-
-    }
 }

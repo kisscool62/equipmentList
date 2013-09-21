@@ -27,7 +27,7 @@ public class Product extends Model {
 
     @Constraints.Required
     @ManyToOne
-    public EquipmentType equipmentType;
+    public TypeOfEquipment typeOfEquipment;
 
     @Constraints.Required
     @ManyToOne
@@ -114,8 +114,8 @@ public class Product extends Model {
     public Product() {
     }
 
-    public Product(EquipmentType type, Category category, Brand brand, String name, String description, Integer quantity, String owner, String room, String location, String state, Date dateOfPurchase, Double euroPrice, Double usdPrice) {
-        this.equipmentType = type;
+    public Product(TypeOfEquipment type, Category category, Brand brand, String name, String description, Integer quantity, String owner, String room, String location, String state, Date dateOfPurchase, Double euroPrice, Double usdPrice) {
+        this.typeOfEquipment = type;
         this.category = category;
         this.brand = brand;
         this.name = name;
@@ -137,7 +137,7 @@ public class Product extends Model {
             Logger.info("Try to create product : " + product);
             Product.create(
                     product.name,
-                    product.equipmentType == null ? null : product.equipmentType.name,
+                    product.typeOfEquipment == null ? null : product.typeOfEquipment.name,
                     product.category == null ? null : product.category.name,
                     product.brand == null ? null : product.brand.name,
                     product.description,
@@ -169,14 +169,14 @@ public class Product extends Model {
                 .orderBy(sortBy + " " + order)
                 .fetch("category")
                 .fetch("brand")
-                .fetch("equipmentType")
+                .fetch("typeOfEquipment")
                 .findPagingList(pageSize)
                 .getPage(page);
     }
 
     public static Product create(String name, String typeName, String categoryName, String brandName, String description, Integer quantity, String owner, String room, String location, String state, Date dateOfPurchase, Double euroPrice, Double usdPrice) {
         Category category = Category.findOrCreate(categoryName);
-        EquipmentType type = EquipmentType.findOrCreate(typeName);
+        TypeOfEquipment type = TypeOfEquipment.findOrCreate(typeName);
         Brand brand = Brand.findOrCreate(brandName);
         Product product = new Product(type, category, brand, name, description, quantity, owner, room, location, state, dateOfPurchase, euroPrice, usdPrice);
         Logger.info("Product: " + product);
@@ -223,7 +223,7 @@ public class Product extends Model {
     public String toString() {
         return "Product{" +
                 "id=" + id +
-                ", type=" + equipmentType +
+                ", type=" + typeOfEquipment +
                 ", category=" + category +
                 ", brand=" + brand +
                 ", name='" + name + '\'' +

@@ -23,7 +23,14 @@ POST        /upload                       controllers.Application.upload()
 
 #Categories
 # Products
-GET         /categories                     controllers.Application.categories(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
-POST        /categories                     controllers.Application.newCategory()
-POST        /categories/:id                 controllers.Application.editCategory(id: String)
-POST        /categories/:id/delete          controllers.Application.deleteCategory(id: String)
+GET         /categories                    controllers.Application.categories(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+POST        /categories                    controllers.Application.newCategory()
+POST        /categories/:id                controllers.Application.editCategory(id: String)
+POST        /categories/:id/delete         controllers.Application.deleteCategory(id: String)
+
+#Categories
+# Products
+GET         /typesOfEquipment              controllers.Application.typesOfEquipment(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+POST        /typesOfEquipment              controllers.Application.newTypeOfEquipment()
+POST        /typesOfEquipment/:id          controllers.Application.editTypeOfEquipment(id: String)
+POST        /typesOfEquipment/:id/delete   controllers.Application.deleteTypeOfEquipment(id: String)

@@ -17,14 +17,9 @@ create table equipment (
   used                      boolean)
 ;
 
-create table equipment_type (
-  name                      varchar(255) not null,
-  constraint pk_equipment_type primary key (name))
-;
-
 create table product (
   id                        bigint not null,
-  equipment_type_name       varchar(255),
+  type_of_equipment_name    varchar(255),
   category_name             varchar(255),
   brand_name                varchar(255),
   name                      varchar(255) not null,
@@ -41,16 +36,21 @@ create table product (
   constraint pk_product primary key (id))
 ;
 
+create table type_of_equipment (
+  name                      varchar(255) not null,
+  constraint pk_type_of_equipment primary key (name))
+;
+
 create sequence brand_seq;
 
 create sequence category_seq;
 
-create sequence equipment_type_seq;
-
 create sequence product_seq;
 
-alter table product add constraint fk_product_equipmentType_1 foreign key (equipment_type_name) references equipment_type (name) on delete restrict on update restrict;
-create index ix_product_equipmentType_1 on product (equipment_type_name);
+create sequence type_of_equipment_seq;
+
+alter table product add constraint fk_product_typeOfEquipment_1 foreign key (type_of_equipment_name) references type_of_equipment (name) on delete restrict on update restrict;
+create index ix_product_typeOfEquipment_1 on product (type_of_equipment_name);
 alter table product add constraint fk_product_category_2 foreign key (category_name) references category (name) on delete restrict on update restrict;
 create index ix_product_category_2 on product (category_name);
 alter table product add constraint fk_product_brand_3 foreign key (brand_name) references brand (name) on delete restrict on update restrict;
@@ -68,9 +68,9 @@ drop table if exists category;
 
 drop table if exists equipment;
 
-drop table if exists equipment_type;
-
 drop table if exists product;
+
+drop table if exists type_of_equipment;
 
 SET REFERENTIAL_INTEGRITY TRUE;
 
@@ -78,7 +78,7 @@ drop sequence if exists brand_seq;
 
 drop sequence if exists category_seq;
 
-drop sequence if exists equipment_type_seq;
-
 drop sequence if exists product_seq;
+
+drop sequence if exists type_of_equipment_seq;
 

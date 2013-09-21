@@ -3,6 +3,7 @@ package controllers;
 import helpers.excel.ProductUploader;
 import models.Category;
 import models.Product;
+import models.TypeOfEquipment;
 import play.Logger;
 import play.mvc.Controller;
 import play.mvc.Http;
@@ -10,6 +11,7 @@ import play.mvc.Result;
 import play.mvc.Results;
 import views.html.category;
 import views.html.index;
+import views.html.typeOfEquipment;
 
 import java.io.File;
 import java.util.List;
@@ -40,6 +42,23 @@ public class Application extends Controller {
         return ok(
             category.render(
                     Category.page(page, 20, sortBy, order, filter),
+                    sortBy, order, filter
+            )
+        );
+    }
+
+    /**
+     * Display the paginated list of type of equipments.
+     *
+     * @param page Current page number (starts from 0)
+     * @param sortBy Column to be sorted
+     * @param order Sort order (either asc or desc)
+     * @param filter Filter applied on type names
+     */
+    public static Result typesOfEquipment(int page, String sortBy, String order, String filter) {
+        return ok(
+            typeOfEquipment.render(
+                    TypeOfEquipment.page(page, 20, sortBy, order, filter),
                     sortBy, order, filter
             )
         );
@@ -129,6 +148,18 @@ public class Application extends Controller {
     }
 
     public static Result deleteCategory(String id) {
+        return Results.TODO;
+    }
+
+    public static Result newTypeOfEquipment() {
+        return Results.TODO;
+    }
+
+    public static Result editTypeOfEquipment(String id) {
+        return Results.TODO;
+    }
+
+    public static Result deleteTypeOfEquipment(String id) {
         return Results.TODO;
     }
 }

@@ -130,8 +130,8 @@ public class ProductUploader {
             if(Category.class.equals(t)){
                 return (T) new Category((String)extractCell(cell, String.class));
             }
-            if(EquipmentType.class.equals(t)){
-                return (T) new EquipmentType((String)extractCell(cell, String.class));
+            if(TypeOfEquipment.class.equals(t)){
+                return (T) new TypeOfEquipment((String)extractCell(cell, String.class));
             }
         }
         return extractCell(cell, t);

@@ -11,7 +11,7 @@ import java.util.Date;
  * Time: 6:41 PM
  */
 public enum ProductFields {
-    PRODUCT_TYPE("Type", getWriteMethod("equipmentType"), String.class, 0),
+    PRODUCT_TYPE("Type", getWriteMethod("typeOfEquipment"), String.class, 0),
     CATEGORY("Category", getWriteMethod("category"), String.class, 1),
     BRAND("Brand", getWriteMethod("brand"), String.class, 2),
     NAME("Name", getWriteMethod("name"), String.class, 3),
