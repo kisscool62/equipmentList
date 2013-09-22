@@ -23,10 +23,10 @@ POST        /upload                       controllers.ProductController.upload()
 
 #Categories
 # Products
-GET         /categories                    controllers.Application.categories(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
-POST        /categories                    controllers.Application.newCategory()
-POST        /categories/:id                controllers.Application.editCategory(id: String)
-POST        /categories/:id/delete         controllers.Application.deleteCategory(id: String)
+GET         /categories                    controllers.CategoryController.categories(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+POST        /categories                    controllers.CategoryController.newCategory()
+POST        /categories/:id                controllers.CategoryController.editCategory(id: String)
+POST        /categories/:id/delete         controllers.CategoryController.deleteCategory(id: String)
 
 #Categories
 # Products
