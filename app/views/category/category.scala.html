@@ -30,7 +30,7 @@
     * Helper generating table headers *
     ***********************************@
     @header(key:String, title:String) = {
-        <th class="@key.replace(".","_") header @if(currentSortBy == key) @{if(currentOrder == "asc") "headerSortDown" else "headerSortUp"}">
+        <th class="@key.replace("../../../public","_") header @if(currentSortBy == key) @{if(currentOrder == "asc") "headerSortDown" else "headerSortUp"}">
             <a href="@link(0, key)">@title</a>
         </th>
     }
@@ -51,7 +51,7 @@
                 <input type="submit" id="searchsubmit" value="Filter by name" class="btn primary">
             </form>
 
-            <a class="btn success" id="add" href="@routes.CategoryController.newCategory()">Add a new category</a>
+            <a class="btn success" id="add" href="@routes.CategoryController.create()">Add a new category</a>
 
         </div>
 

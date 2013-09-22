@@ -24,7 +24,8 @@ POST        /upload                       controllers.ProductController.upload()
 #Categories
 # Products
 GET         /categories                    controllers.CategoryController.categories(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
-POST        /categories                    controllers.CategoryController.newCategory()
+GET         /categories/new                controllers.CategoryController.create()
+POST        /categories                    controllers.CategoryController.save()
 POST        /categories/:id                controllers.CategoryController.editCategory(id: String)
 POST        /categories/:id/delete         controllers.CategoryController.deleteCategory(id: String)
 

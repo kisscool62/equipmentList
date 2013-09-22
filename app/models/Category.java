@@ -6,6 +6,8 @@ import play.db.ebean.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * User: Pascal AUREGAN
@@ -63,6 +65,13 @@ public class Category extends Model {
         return category;
     }
 
+    public static Map<String,String> options() {
+        LinkedHashMap<String,String> options = new LinkedHashMap<String,String>();
+        for(Category c: Category.find.orderBy("name").findList()) {
+            options.put(c.name, c.name);
+        }
+        return options;
+    }
 
     public static Category create(String categoryName) {
         Category category = new Category(categoryName);
