@@ -15,11 +15,11 @@ POST        /equipments/:id/delete        controllers.Application.deleteEquipmen
 
 
 # Products
-GET         /products                     controllers.Application.products(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
-POST        /products                     controllers.Application.newProduct()
-POST        /products/:id                 controllers.Application.editProduct(id: Long)
-POST        /products/:id/delete          controllers.Application.deleteProduct(id: Long)
-POST        /upload                       controllers.Application.upload()
+GET         /products                     controllers.ProductController.products(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+POST        /products                     controllers.ProductController.newProduct()
+POST        /products/:id                 controllers.ProductController.editProduct(id: Long)
+POST        /products/:id/delete          controllers.ProductController.deleteProduct(id: Long)
+POST        /upload                       controllers.ProductController.upload()
 
 #Categories
 # Products

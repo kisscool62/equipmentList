@@ -22,7 +22,7 @@
         }
 
         // Generate the link
-        routes.Application.products(newPage, sortBy, order, currentFilter)
+        routes.ProductController.products(newPage, sortBy, order, currentFilter)
 
     }
 
@@ -51,7 +51,7 @@
                 <input type="submit" id="searchsubmit" value="Filter by name" class="btn primary">
             </form>
 
-            <a class="btn success" id="add" href="@routes.Application.newProduct()">Add a new product</a>
+            <a class="btn success" id="add" href="@routes.ProductController.newProduct()">Add a new product</a>
 
         </div>
 
@@ -75,9 +75,9 @@
 
                     @for(product <- currentPage.getList) {
                         <tr>
-                            <td><a href="@routes.Application.editProduct(product.id)">@product.name</a></td>
-                            <td><a href="@routes.Application.editProduct(product.id)">@product.typeOfEquipment.name</a></td>
-                            <td><a href="@routes.Application.editProduct(product.id)">@product.category.name</a></td>
+                            <td><a href="@routes.ProductController.editProduct(product.id)">@product.name</a></td>
+                            <td><a href="@routes.ProductController.editProduct(product.id)">@product.typeOfEquipment.name</a></td>
+                            <td><a href="@routes.ProductController.editProduct(product.id)">@product.category.name</a></td>
                         </tr>
                     }
 
@@ -112,7 +112,7 @@
 
         }
 
-    @helper.form(action = routes.Application.upload, 'enctype -> "multipart/form-data") {
+    @helper.form(action = routes.ProductController.upload, 'enctype -> "multipart/form-data") {
 
         <input type="file" name="inventory">
         <p>
