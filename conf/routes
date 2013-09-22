@@ -30,7 +30,7 @@ POST        /categories/:id/delete         controllers.CategoryController.delete
 
 #Categories
 # Products
-GET         /typesOfEquipment              controllers.Application.typesOfEquipment(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
-POST        /typesOfEquipment              controllers.Application.newTypeOfEquipment()
-POST        /typesOfEquipment/:id          controllers.Application.editTypeOfEquipment(id: String)
-POST        /typesOfEquipment/:id/delete   controllers.Application.deleteTypeOfEquipment(id: String)
+GET         /typesOfEquipment              controllers.TypeOfEquipmentController.typesOfEquipment(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+POST        /typesOfEquipment              controllers.TypeOfEquipmentController.newTypeOfEquipment()
+POST        /typesOfEquipment/:id          controllers.TypeOfEquipmentController.editTypeOfEquipment(id: String)
+POST        /typesOfEquipment/:id/delete   controllers.TypeOfEquipmentController.deleteTypeOfEquipment(id: String)
