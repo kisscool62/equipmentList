@@ -1,11 +1,17 @@
 package models;
 
+import com.avaje.ebean.ExpressionList;
 import com.avaje.ebean.Page;
+import com.google.common.base.Preconditions;
 import play.Logger;
+import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * User: Pascal AUREGAN
@@ -16,20 +22,27 @@ import javax.persistence.Id;
 public class TypeOfEquipment extends Model {
 
     @Id
+    public Long id;
+
+    @Column(unique = true)
+    public String nameId;
+
+    @Constraints.Required
+    @Column(unique = true)
     public String name;
 
     public static Finder<String, TypeOfEquipment> find = new Finder<String, TypeOfEquipment>(String.class, TypeOfEquipment.class);
 
-    public TypeOfEquipment() {
+    public TypeOfEquipment(String name) {
+        this.nameId = makeId(name);
+        this.name = name.trim();
     }
 
-    public TypeOfEquipment(String name) {
-        this.name = name;
-    }
 
     @Override
     public String toString() {
         return "TypeOfEquipment{" +
+                "nameId='" + nameId + '\'' + ", "+
                 "name='" + name + '\'' +
                 '}';
     }
@@ -53,17 +66,17 @@ public class TypeOfEquipment extends Model {
     }
 
     public static TypeOfEquipment findOrCreate(String typeName) {
-        //we can't find or create a TypeOfEquipment with id null
-        if(typeName == null){
+         //we can't find or create a typeOfEquipment with id null
+        if(typeName == null && "".equals(typeName)){
             return null;
         }
-        TypeOfEquipment type = find.byId(typeName);
-        Logger.debug("Found TypeOfEquipment for name " + typeName + ": " + type);
-        if(type == null){
-            type = create(typeName);
+        TypeOfEquipment typeOfEquipment = findByNameId(makeId(typeName));
+        Logger.debug("Found TypeOfEquipment for name " + typeName + ": " + typeOfEquipment);
+        if(typeOfEquipment == null){
+            typeOfEquipment = create(typeName);
         }
-        Logger.debug("Found TypeOfEquipment for name " + typeName + ": " + type);
-        return type;
+        Logger.debug("Found TypeOfEquipment for name " + typeName + ": " + typeOfEquipment);
+        return typeOfEquipment;
     }
 
     public static TypeOfEquipment create(String typeName) {
@@ -71,4 +84,52 @@ public class TypeOfEquipment extends Model {
         type.save();
         return type;
     }
+
+    private static String makeId(String name){
+        Preconditions.checkArgument(name != null && !"".equals(name.trim()), "Name of Category mustn't be null");
+        return name.trim().toUpperCase();
+    }
+
+    public static Map<String,String> options() {
+        LinkedHashMap<String,String> options = new LinkedHashMap<String,String>();
+        for(TypeOfEquipment c: TypeOfEquipment.find.orderBy("nameId").findList()) {
+            options.put(c.name, c.name);
+        }
+        return options;
+    }
+
+    @Override
+    public void save(){
+        nameId = makeId(name);
+        super.save();
+    }
+
+    public boolean saveOrReturnFalseIfExists(){
+        nameId = makeId(name);
+        if(nameIdExists()){
+            Logger.info(toString() + " was found, so was not saved");
+            return false;
+        }else{
+            Logger.info(toString() + " was not found, so was saved");
+            save();
+            return true;
+        }
+    }
+
+    /**
+        *
+        * @return true if nameId is found in database
+        */
+       public boolean nameIdExists() {
+           return createExpressionFindByNameId(nameId).findRowCount() != 0;
+       }
+
+       private static TypeOfEquipment findByNameId(String nameId){
+           return createExpressionFindByNameId(nameId).findUnique();
+       }
+
+       private static ExpressionList<TypeOfEquipment> createExpressionFindByNameId(String nameId) {
+           return find.where().ilike("nameId", "%" + nameId + "%");
+       }
+
 }

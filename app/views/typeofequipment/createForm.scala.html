@@ -1,0 +1,26 @@
+@(typeOfEquipmentForm: Form[TypeOfEquipment])
+
+@import helper._
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
+
+@main("Create a new Type Of Equipment") {
+    
+    <h1>Add a type of equipment</h1>
+    
+    @form(routes.TypeOfEquipmentController.save()) {
+        
+        <fieldset>
+        
+            @inputText(typeOfEquipmentForm("name"), '_label -> "TypeOfEquipment name")
+
+        </fieldset>
+        
+        <div class="actions">
+            <input type="submit" value="Create this type of equipment" class="btn primary"> or
+            <a href="@routes.TypeOfEquipmentController.typesOfEquipment()" class="btn">Cancel</a>
+        </div>
+        
+    }
+    
+}

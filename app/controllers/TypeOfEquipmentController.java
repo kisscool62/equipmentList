@@ -1,10 +1,14 @@
 package controllers;
 
 import models.TypeOfEquipment;
+import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
-import views.html.typeOfEquipment;
+import views.html.typeofequipment.createForm;
+import views.html.typeofequipment.typeOfEquipment;
+
+import static play.data.Form.form;
 
 /**
  * User: Pascal AUREGAN
@@ -12,6 +16,12 @@ import views.html.typeOfEquipment;
  * Time: 10:39 AM
  */
 public class TypeOfEquipmentController extends Controller {
+
+    /**
+     * This result directly redirect to application home.
+     */
+    public static Result GO_HOME = redirect(routes.TypeOfEquipmentController.typesOfEquipment(0, "nameId", "asc", ""));
+
     /**
      * Display the paginated list of type of equipments.
      *
@@ -29,9 +39,35 @@ public class TypeOfEquipmentController extends Controller {
         );
     }
 
-    public static Result newTypeOfEquipment() {
-        return Results.TODO;
+    /**
+     * Display the 'new computer form'.
+     */
+    public static Result create() {
+        Form<TypeOfEquipment> typeOfEquipmentForm= form(TypeOfEquipment.class);
+        return ok(
+            createForm.render(typeOfEquipmentForm)
+        );
     }
+
+    /**
+     * Handle the 'new typeOfEquipment form' submission
+     */
+    public static Result save() {
+        Form<TypeOfEquipment> typeOfEquipmentForm = form(TypeOfEquipment.class).bindFromRequest();
+        if(typeOfEquipmentForm.hasErrors()) {
+            return badRequest(createForm.render(typeOfEquipmentForm));
+        }
+        final TypeOfEquipment typeOfEquipmentCandidate = typeOfEquipmentForm.get();
+        final boolean wasSaved = typeOfEquipmentCandidate.saveOrReturnFalseIfExists();
+        if(wasSaved){
+            flash("success", "TypeOfEquipment " + typeOfEquipmentCandidate.name + " has been created");
+        }else{
+            flash("error", "TypeOfEquipment " + typeOfEquipmentCandidate.name + " was not created because exists");
+        }
+        return GO_HOME;
+    }
+
+
 
     public static Result editTypeOfEquipment(String id) {
         return Results.TODO;
