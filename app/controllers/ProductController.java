@@ -20,6 +20,12 @@ import java.util.List;
 public class ProductController extends Controller {
 
     /**
+     * This result directly redirect to application home.
+     */
+//    public static Result GO_HOME = redirect(routes.ProductController.products(0, "nameId", "asc", ""));
+    public static Result GO_HOME = redirect(routes.Application.index());
+
+    /**
      * Display the paginated list of products.
      *
      * @param page Current page number (starts from 0)
@@ -43,28 +49,33 @@ public class ProductController extends Controller {
             String fileName = inventory.getFilename();
             String contentType = inventory.getContentType();
             File file = inventory.getFile();
-            if (fileName.endsWith(".xlsx") || fileName.endsWith(".xls")) {
-                ProductUploader productUploader = new ProductUploader();
-                try{
-                    Logger.info("Starting to upload inventory in Excel mode");
-                    final List<Product> products = productUploader.treat(file);
-                    Logger.info("Upload inventory in Excel mode done");
-                    Logger.info("Saving uploaded products");
-                    Product.create(products);
-                    Logger.info("Uploaded products saved");
-                }catch (Throwable e){
-                    Logger.info("Could not upload the file: ", e);
-                    flash("error", e.getMessage());
-                    return redirect(routes.Application.index());
-                }
-                return redirect(routes.Application.index());
-            } else {
-                flash("error", "File should be [.xlsx|.xls] file");
-                return redirect(routes.Application.index());
-            }
+            return manageUploadedFile(file, fileName);
         } else {
             flash("error", "Missing file");
-            return redirect(routes.Application.index());
+            return GO_HOME;
+        }
+    }
+
+    protected static Result manageUploadedFile(File file, String fileName) {
+        if (fileName.endsWith(".xlsx") || fileName.endsWith(".xls")) {
+            ProductUploader productUploader = new ProductUploader();
+            try{
+                Logger.info("Starting to upload inventory in Excel mode");
+                final List<Product> products = productUploader.treat(file);
+                Logger.info("Upload inventory in Excel mode done");
+                Logger.info("Saving uploaded products");
+                Product.create(products);
+                Logger.info("Uploaded products saved");
+                flash("success", "Uploaded succeeded with " + products.size() + " products saved");
+                return GO_HOME;
+            }catch (Throwable e){
+                Logger.info("Could not upload the file: ", e);
+                flash("error", e.getMessage());
+                return GO_HOME;
+            }
+        } else {
+            flash("error", "File should be [.xlsx|.xls] file");
+            return GO_HOME;
         }
     }
 
