@@ -20,7 +20,7 @@ public class CategoryController extends Controller {
     /**
      * This result directly redirect to application home.
      */
-    public static Result GO_HOME = redirect(routes.CategoryController.categories(0, "name", "asc", ""));
+    public static Result GO_HOME = redirect(routes.CategoryController.categories(0, "nameId", "asc", ""));
 
     /**
      * Display the paginated list of categories.
@@ -57,8 +57,13 @@ public class CategoryController extends Controller {
         if(categoryForm.hasErrors()) {
             return badRequest(createForm.render(categoryForm));
         }
-        categoryForm.get().save();
-        flash("success", "Category " + categoryForm.get().name + " has been created");
+        final Category categoryCandidate = categoryForm.get();
+        final boolean wasSaved = categoryCandidate.saveOrReturnFalseIfExists();
+        if(wasSaved){
+            flash("success", "Category " + categoryCandidate.name + " has been created");
+        }else{
+            flash("error", "Category " + categoryCandidate.name + " was not created because exists");
+        }
         return GO_HOME;
     }
 

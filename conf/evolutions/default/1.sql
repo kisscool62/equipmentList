@@ -9,8 +9,12 @@ create table brand (
 ;
 
 create table category (
-  name                      varchar(255) not null,
-  constraint pk_category primary key (name))
+  id                        bigint not null,
+  name_id                   varchar(255),
+  name                      varchar(255),
+  constraint uq_category_name_id unique (name_id),
+  constraint uq_category_name unique (name),
+  constraint pk_category primary key (id))
 ;
 
 create table equipment (
@@ -20,7 +24,7 @@ create table equipment (
 create table product (
   id                        bigint not null,
   type_of_equipment_name    varchar(255),
-  category_name             varchar(255),
+  category_id               bigint,
   brand_name                varchar(255),
   name                      varchar(255) not null,
   description               varchar(255),
@@ -51,8 +55,8 @@ create sequence type_of_equipment_seq;
 
 alter table product add constraint fk_product_typeOfEquipment_1 foreign key (type_of_equipment_name) references type_of_equipment (name) on delete restrict on update restrict;
 create index ix_product_typeOfEquipment_1 on product (type_of_equipment_name);
-alter table product add constraint fk_product_category_2 foreign key (category_name) references category (name) on delete restrict on update restrict;
-create index ix_product_category_2 on product (category_name);
+alter table product add constraint fk_product_category_2 foreign key (category_id) references category (id) on delete restrict on update restrict;
+create index ix_product_category_2 on product (category_id);
 alter table product add constraint fk_product_brand_3 foreign key (brand_name) references brand (name) on delete restrict on update restrict;
 create index ix_product_brand_3 on product (brand_name);
 

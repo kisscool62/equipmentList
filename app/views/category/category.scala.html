@@ -39,8 +39,14 @@
     <h1 id="homeTitle">@Messages("categories.list.title", currentPage.getTotalRowCount)</h1>
 
         @if(flash.containsKey("success")) {
-            <div class="alert-message warning">
+            <div class="alert-message success">
                 <strong>Done!</strong> @flash.get("success")
+            </div>
+        }
+
+        @if(flash.containsKey("error")) {
+            <div class="alert-message error">
+                <strong>Done!</strong> @flash.get("error")
             </div>
         }
 
