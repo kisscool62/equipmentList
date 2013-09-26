@@ -2,6 +2,7 @@ package models;
 
 import com.avaje.ebean.Page;
 import com.avaje.ebean.validation.NotNull;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
 import play.Logger;
 import play.data.validation.Constraints;
@@ -38,6 +39,8 @@ public class Product extends Model {
 
     @NotNull
     public String name;
+
+    public String nameId;
 
     public String description;
 
@@ -119,6 +122,7 @@ public class Product extends Model {
         this.category = category;
         this.brand = brand;
         this.name = name;
+        this.nameId = makeId(name);
         this.description = description;
         this.quantity = quantity;
         this.remaining_quantity = quantity;
@@ -183,6 +187,17 @@ public class Product extends Model {
         product.save();
         Logger.info("Product saved");
         return product;
+    }
+
+    private static String makeId(String name){
+        Preconditions.checkArgument(name != null && !"".equals(name.trim()), "Name of Product mustn't be null");
+        return name.trim().toUpperCase();
+    }
+
+    @Override
+    public void save(){
+        nameId = makeId(name);
+        super.save();
     }
 
     public static class FieldMap<T> extends HashMap<T, FieldProperties> {

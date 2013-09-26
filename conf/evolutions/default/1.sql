@@ -27,6 +27,7 @@ create table product (
   category_id               bigint,
   brand_name                varchar(255),
   name                      varchar(255) not null,
+  name_id                   varchar(255),
   description               varchar(255),
   quantity                  integer,
   remaining_quantity        integer,

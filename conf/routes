@@ -15,7 +15,7 @@ POST        /equipments/:id/delete        controllers.Application.deleteEquipmen
 
 
 # Products
-GET         /products                     controllers.ProductController.products(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+GET         /products                     controllers.ProductController.products(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
 POST        /products                     controllers.ProductController.newProduct()
 POST        /products/:id                 controllers.ProductController.editProduct(id: Long)
 POST        /products/:id/delete          controllers.ProductController.deleteProduct(id: Long)
@@ -31,7 +31,7 @@ POST        /categories/:id/delete         controllers.CategoryController.delete
 
 #Categories
 # Products
-GET         /typesOfEquipment              controllers.TypeOfEquipmentController.typesOfEquipment(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+GET         /typesOfEquipment              controllers.TypeOfEquipmentController.typesOfEquipment(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
 GET         /typesOfEquipment/new          controllers.TypeOfEquipmentController.create()
 POST        /typesOfEquipment              controllers.TypeOfEquipmentController.save()
 POST        /typesOfEquipment/:id          controllers.TypeOfEquipmentController.editTypeOfEquipment(id: String)
