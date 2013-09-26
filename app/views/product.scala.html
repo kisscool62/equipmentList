@@ -76,6 +76,16 @@
                     @header("name", "Product name")
                     @header("typeOfEquipment.name", "Type")
                     @header("category.name", "Category")
+                    @header("brand.name", "Marque")
+                    @header("description", "Description")
+                    @header("quantity", "Quant.")
+                    @header("owner", "Proprio")
+                    @header("room", "Salle")
+                    @header("location", "Emplacement")
+                    @header("state", "Etat")
+                    @header("dateOfPurchase", "Date Achat")
+                    @header("euroPrice", "Prix Achat Unit.")
+                    @header("usdPrice", "USD")
                 </tr>
             </thead>
             <tbody>
@@ -85,6 +95,17 @@
                     <td><a href="@routes.ProductController.editProduct(product.id)">@product.name</a></td>
                     <td><a href="@routes.ProductController.editProduct(product.id)">@product.typeOfEquipment.name</a></td>
                     <td><a href="@routes.ProductController.editProduct(product.id)">@product.category.name</a></td>
+                    @if(product.brand == null){<td></td>}
+                    @if(product.brand != null){<td><a href="@routes.ProductController.editProduct(product.id)">@product.brand.name</a></td>}
+                    <td><a href="@routes.ProductController.editProduct(product.id)">@product.description</a></td>
+                    <td><a href="@routes.ProductController.editProduct(product.id)">@product.quantity</a></td>
+                    <td><a href="@routes.ProductController.editProduct(product.id)">@product.owner</a></td>
+                    <td><a href="@routes.ProductController.editProduct(product.id)">@product.room</a></td>
+                    <td><a href="@routes.ProductController.editProduct(product.id)">@product.location</a></td>
+                    <td><a href="@routes.ProductController.editProduct(product.id)">@product.state</a></td>
+                    <td><a href="@routes.ProductController.editProduct(product.id)">@product.dateOfPurchase</a></td>
+                    <td><a href="@routes.ProductController.editProduct(product.id)">@product.euroPrice</a></td>
+                    <td><a href="@routes.ProductController.editProduct(product.id)">@product.usdPrice</a></td>
                 </tr>
             }
 

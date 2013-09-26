@@ -4,8 +4,12 @@
 # --- !Ups
 
 create table brand (
-  name                      varchar(255) not null,
-  constraint pk_brand primary key (name))
+  id                        bigint not null,
+  name_id                   varchar(255),
+  name                      varchar(255),
+  constraint uq_brand_name_id unique (name_id),
+  constraint uq_brand_name unique (name),
+  constraint pk_brand primary key (id))
 ;
 
 create table category (
@@ -25,7 +29,7 @@ create table product (
   id                        bigint not null,
   type_of_equipment_id      bigint,
   category_id               bigint,
-  brand_name                varchar(255),
+  brand_id                  bigint,
   name                      varchar(255) not null,
   name_id                   varchar(255),
   description               varchar(255),
@@ -62,8 +66,8 @@ alter table product add constraint fk_product_typeOfEquipment_1 foreign key (typ
 create index ix_product_typeOfEquipment_1 on product (type_of_equipment_id);
 alter table product add constraint fk_product_category_2 foreign key (category_id) references category (id) on delete restrict on update restrict;
 create index ix_product_category_2 on product (category_id);
-alter table product add constraint fk_product_brand_3 foreign key (brand_name) references brand (name) on delete restrict on update restrict;
-create index ix_product_brand_3 on product (brand_name);
+alter table product add constraint fk_product_brand_3 foreign key (brand_id) references brand (id) on delete restrict on update restrict;
+create index ix_product_brand_3 on product (brand_id);
 
 
 
