@@ -83,13 +83,25 @@ public class ProductController extends Controller {
         return Results.TODO;
     }
 
-    public static Result editProduct(Long id) {
+    public static Result edit(Long id) {
         return Results.TODO;
     }
 
 
-    public static Result deleteProduct(long id) {
-        return Results.TODO;
+    public static Result delete(long id) {
+        final Product product = Product.find.byId(id);
+        if(product != null){
+            product.delete();
+            flash("success", "The product " + product.name + " was correctly deleted");
+        }else{
+            flash("error", "The product couldn't be deleted");
+        }
+        return GO_HOME;
     }
 
+    public static Result deleteAll() {
+        int nbProductDeleted = Product.deleteAll();
+        flash("success", "" + nbProductDeleted + (nbProductDeleted == 1 || nbProductDeleted == 0? "was":"were") + " correctly deleted");
+        return GO_HOME;
+    }
 }

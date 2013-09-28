@@ -55,6 +55,17 @@ public class Product extends Model {
     public Double euroPrice;
     public Double usdPrice;
 
+    public static Finder<Long, Product> find = new Finder<Long, Product>(Long.class, Product.class);
+
+    public static int deleteAll() {
+        final List<Product> products = find.all();
+        int nbDeletedProducts = products.size();
+        for (Product product : products) {
+            product.delete();
+        }
+        return nbDeletedProducts;
+    }
+
     public static class FieldProperties {
         private int index;
         private ProductFields productFields;
@@ -111,8 +122,6 @@ public class Product extends Model {
         result.put("USD", new FieldProperties(ProductFields.USD_PRICE.getParsedLocation(), ProductFields.USD_PRICE));
         return result;
     }
-
-    public static Finder<String, Product> find = new Finder<String, Product>(String.class, Product.class);
 
     public Product() {
     }

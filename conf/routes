@@ -17,8 +17,9 @@ POST        /equipments/:id/delete        controllers.Application.deleteEquipmen
 # Products
 GET         /products                     controllers.ProductController.products(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
 POST        /products                     controllers.ProductController.newProduct()
-POST        /products/:id                 controllers.ProductController.editProduct(id: Long)
-POST        /products/:id/delete          controllers.ProductController.deleteProduct(id: Long)
+POST        /products/:id                 controllers.ProductController.edit(id: Long)
+POST        /products/:id/delete          controllers.ProductController.delete(id: Long)
+GET        /products/deleteAll            controllers.ProductController.deleteAll()
 POST        /upload                       controllers.ProductController.upload()
 
 #Categories
