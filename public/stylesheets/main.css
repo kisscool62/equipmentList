@@ -88,6 +88,21 @@ input[type="submit"].deletePicture {
     width: 16px;
 }
 
+.floating{
+    position: relative;
+    float: left;
+    display: inline;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 #pagination {
     position: relative;
 }

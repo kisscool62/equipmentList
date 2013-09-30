@@ -32,7 +32,7 @@
         * Helper generating table headers *
         ***********************************@
     @header(key: String, title: String) = {
-        <th class="@key.replace(".", "_") header @if(currentSortBy == key) @{
+        <th class="@key.replace("../../../public", "_") header @if(currentSortBy == key) @{
             if(currentOrder == "asc") "headerSortDown" else "headerSortUp"
         }">
             <a href="@link(0, key)">@title</a>
@@ -62,7 +62,7 @@
         </form>
 
 
-        <a class="btn success" id="add" href="@routes.ProductController.newProduct()">Add a new product</a>
+        <a class="btn success" id="add" href="@routes.ProductController.create()">Add a new product</a>
 
 
 

@@ -3,14 +3,18 @@ package controllers;
 import helpers.excel.ProductUploader;
 import models.Product;
 import play.Logger;
+import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
-import views.html.product;
+import views.html.product.createForm;
+import views.html.product.product;
 
 import java.io.File;
 import java.util.List;
+
+import static play.data.Form.form;
 
 /**
  * User: Pascal AUREGAN
@@ -79,8 +83,27 @@ public class ProductController extends Controller {
         }
     }
 
-    public static Result newProduct() {
-        return Results.TODO;
+    public static Result create() {
+        Form<Product> productForm= form(Product.class);
+        return ok(
+            createForm.render(productForm)
+        );
+    }
+
+    /**
+     * Handle the 'new category form' submission
+     */
+    public static Result save() {
+        Form<Product> productForm = form(Product.class).bindFromRequest();
+        if(productForm.hasErrors()) {
+            return badRequest(views.html.product.createForm.render(productForm));
+        }
+        final Product productCandidate = productForm.get();
+        productCandidate.save();
+
+        flash("success", "Product " + productCandidate.name + " has been created");
+
+        return GO_HOME;
     }
 
     public static Result edit(Long id) {

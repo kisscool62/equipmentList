@@ -1,0 +1,96 @@
+@(productForm: Form[Product])
+
+@import helper._
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
+
+@main("Create a new Product") {
+    
+    <h1>Add a product</h1>
+
+    @if(flash.containsKey("success")) {
+        <div class="alert-message success">
+            <strong>Done!</strong> @flash.get("success")
+        </div>
+    }
+
+    @if(flash.containsKey("error")) {
+        <div class="alert-message error">
+            <strong>Done!</strong> @flash.get("error")
+        </div>
+    }
+    
+    @form(routes.ProductController.save()) {
+
+
+        <fieldset class="floating">
+
+            @inputText(productForm("name"), '_label -> "Product name")
+
+        </fieldset>
+
+        <div class="clear"></div>
+
+        <fieldset class="floating">
+        
+            @select(
+                productForm("category.id"),
+                    options(Category.options),
+                    '_label -> "Category", '_default -> "-- Choose a category --",
+                    '_showConstraints -> false
+            )
+
+            @select(
+                productForm("typeOfEquipment.id"),
+                    options(TypeOfEquipment.options),
+                    '_label -> "Type of equipment", '_default -> "-- Choose a type of equipment --",
+                    '_showConstraints -> false
+            )
+
+            @select(
+                productForm("brand.id"),
+                    options(Brand.options),
+                    '_label -> "Brand", '_default -> "-- Choose a brand --",
+                    '_showConstraints -> false
+            )
+
+        </fieldset>
+
+        <fieldset class="floating">
+
+            @inputText(productForm("description"), '_label -> "Description")
+
+            @inputText(productForm("quantity"), '_label -> "Quantity")
+
+            @inputText(productForm("owner"), '_label -> "Owner")
+
+        </fieldset>
+
+        <fieldset class="floating">
+            @inputText(productForm("room"), '_label -> "Room")
+
+            @inputText(productForm("location"), '_label -> "Location")
+
+            @inputText(productForm("state"), '_label -> "State")
+
+        </fieldset>
+
+        <fieldset class="floating">
+
+            @inputDate(productForm("dateOfPurchase"), '_label -> "Date of purchase")
+
+            @inputDate(productForm("euroPrice"), '_label -> "Price EUR")
+
+            @inputDate(productForm("usdPrice"), '_label -> "Price USD")
+        </fieldset>
+
+        <div class="clear"></div>
+        
+        <div class="actions">
+            <input type="submit" value="Create this product" class="btn primary"> or
+            <a href="@routes.ProductController.products()" class="btn">Cancel</a>
+        </div>
+        
+    }
+    
+}

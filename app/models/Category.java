@@ -86,7 +86,7 @@ public class Category extends Model {
     public static Map<String,String> options() {
         LinkedHashMap<String,String> options = new LinkedHashMap<String,String>();
         for(Category c: Category.find.orderBy("nameId").findList()) {
-            options.put(c.name, c.name);
+            options.put(c.id.toString(), c.name);
         }
         return options;
     }
