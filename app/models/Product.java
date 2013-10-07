@@ -38,6 +38,7 @@ public class Product extends Model {
     public Brand brand;
 
     @NotNull
+    @Constraints.Required
     public String name;
 
     public String nameId;
