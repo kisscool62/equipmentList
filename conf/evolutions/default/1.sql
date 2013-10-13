@@ -25,6 +25,15 @@ create table equipment (
   used                      boolean)
 ;
 
+create table event (
+  id                        bigint not null,
+  start_date                timestamp,
+  end_date                  timestamp,
+  name                      varchar(255),
+  name_id                   varchar(255),
+  constraint pk_event primary key (id))
+;
+
 create table product (
   id                        bigint not null,
   type_of_equipment_id      bigint,
@@ -58,6 +67,8 @@ create sequence brand_seq;
 
 create sequence category_seq;
 
+create sequence event_seq;
+
 create sequence product_seq;
 
 create sequence type_of_equipment_seq;
@@ -81,6 +92,8 @@ drop table if exists category;
 
 drop table if exists equipment;
 
+drop table if exists event;
+
 drop table if exists product;
 
 drop table if exists type_of_equipment;
@@ -90,6 +103,8 @@ SET REFERENTIAL_INTEGRITY TRUE;
 drop sequence if exists brand_seq;
 
 drop sequence if exists category_seq;
+
+drop sequence if exists event_seq;
 
 drop sequence if exists product_seq;
 

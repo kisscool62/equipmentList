@@ -3,38 +3,44 @@
 # ~~~~
 
 # Home page
-GET         /                             controllers.Application.index()
+GET         /                                   controllers.Application.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file                 controllers.Assets.at(path="/public", file)
+GET         /assets/*file                       controllers.Assets.at(path="/public", file)
 
 # Equipments
-GET         /equipments                   controllers.Application.equipments()
-POST        /equipments                   controllers.Application.newEquipment()
-POST        /equipments/:id/delete        controllers.Application.deleteEquipment(id: Long)
+GET         /equipments                         controllers.Application.equipments()
+POST        /equipments                         controllers.Application.newEquipment()
+POST        /equipments/:id/delete              controllers.Application.deleteEquipment(id: Long)
 
 
 # Products
-GET         /products                     controllers.ProductController.products(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
-GET         /products/new                 controllers.ProductController.create()
-POST        /products                     controllers.ProductController.save()
-POST        /products/:id                 controllers.ProductController.edit(id: Long)
-POST        /products/:id/delete          controllers.ProductController.delete(id: Long)
-GET         /products/deleteAll           controllers.ProductController.deleteAll()
-POST        /upload                       controllers.ProductController.upload()
+GET         /products                           controllers.ProductController.products(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
+GET         /products/new                       controllers.ProductController.create()
+POST        /products                           controllers.ProductController.save()
+POST        /products/:id                       controllers.ProductController.edit(id: Long)
+POST        /products/:id/delete                controllers.ProductController.delete(id: Long)
+GET         /products/deleteAll                 controllers.ProductController.deleteAll()
+POST        /upload                             controllers.ProductController.upload()
 
 #Categories
-# Products
-GET         /categories                    controllers.CategoryController.categories(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
-GET         /categories/new                controllers.CategoryController.create()
-POST        /categories                    controllers.CategoryController.save()
-POST        /categories/:id                controllers.CategoryController.editCategory(id: String)
-POST        /categories/:id/delete         controllers.CategoryController.deleteCategory(id: String)
+GET         /events                             controllers.EventController.events(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
+GET         /events/new                         controllers.EventController.create()
+GET         /events/:nameId.pdf                 controllers.EventController.viewPdf(nameId: String)
+POST        /events                             controllers.EventController.save()
+POST        /events/:id                         controllers.EventController.edit(id: Long)
+POST        /events/:id/delete                  controllers.EventController.delete(id: Long)
 
 #Categories
-# Products
-GET         /typesOfEquipment              controllers.TypeOfEquipmentController.typesOfEquipment(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
-GET         /typesOfEquipment/new          controllers.TypeOfEquipmentController.create()
-POST        /typesOfEquipment              controllers.TypeOfEquipmentController.save()
-POST        /typesOfEquipment/:id          controllers.TypeOfEquipmentController.editTypeOfEquipment(id: String)
-POST        /typesOfEquipment/:id/delete   controllers.TypeOfEquipmentController.deleteTypeOfEquipment(id: String)
+GET         /categories                         controllers.CategoryController.categories(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
+GET         /categories/new                     controllers.CategoryController.create()
+POST        /categories                         controllers.CategoryController.save()
+POST        /categories/:id                     controllers.CategoryController.editCategory(id: String)
+POST        /categories/:id/delete              controllers.CategoryController.deleteCategory(id: String)
+
+#Types of equipments
+GET         /typesOfEquipment                   controllers.TypeOfEquipmentController.typesOfEquipment(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
+GET         /typesOfEquipment/new               controllers.TypeOfEquipmentController.create()
+POST        /typesOfEquipment                   controllers.TypeOfEquipmentController.save()
+POST        /typesOfEquipment/:id               controllers.TypeOfEquipmentController.editTypeOfEquipment(id: String)
+POST        /typesOfEquipment/:id/delete        controllers.TypeOfEquipmentController.deleteTypeOfEquipment(id: String)

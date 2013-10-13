@@ -1,0 +1,26 @@
+@(eventForm: Form[Event])
+
+@import helper._
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
+
+@main("Create a new Event") {
+    
+    <h1>Add a event</h1>
+    
+    @form(routes.EventController.save()) {
+        
+        <fieldset>
+        
+            @inputText(eventForm("name"), '_label -> "Event name")
+
+        </fieldset>
+        
+        <div class="actions">
+            <input type="submit" value="Create this event" class="btn primary"> or
+            <a href="@routes.EventController.events()" class="btn">Cancel</a>
+        </div>
+        
+    }
+    
+}

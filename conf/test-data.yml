@@ -1,5 +1,11 @@
-- !!models.Product
-    name:       BobLeSupperProduit
-- !!models.Product
-    name:       OuaisUnProduit2
+- !!models.Event
+    name:       TheSuperEvent
+    nameId:       THESUPEREVENT
+    startDate:       2013-05-10
+    endDate:       2013-08-24
+- !!models.Event
+    name:       TheSuperEventOuais
+    nameId:       THESUPEREVENTOUAIS
+    startDate:       2013-06-05
+    endDate:       2013-09-02
 ...

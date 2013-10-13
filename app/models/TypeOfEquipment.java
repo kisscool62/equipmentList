@@ -3,6 +3,7 @@ package models;
 import com.avaje.ebean.ExpressionList;
 import com.avaje.ebean.Page;
 import com.google.common.base.Preconditions;
+import helpers.common.ModelUtil;
 import play.Logger;
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
@@ -87,7 +88,7 @@ public class TypeOfEquipment extends Model {
 
     private static String makeId(String name){
         Preconditions.checkArgument(name != null && !"".equals(name.trim()), "Name of Category mustn't be null");
-        return name.trim().toUpperCase();
+        return ModelUtil.makeId(name);
     }
 
     public static Map<String,String> options() {

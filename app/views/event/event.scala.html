@@ -1,0 +1,137 @@
+@(currentPage: com.avaje.ebean.Page[Event], currentSortBy: String, currentOrder: String, currentFilter: String)
+
+    @import helper._
+
+    @****************************************
+    * Helper generating navigation links    *
+    ****************************************@
+    @link(newPage:Int, newSortBy:String) = @{
+
+        var sortBy = currentSortBy
+        var order = currentOrder
+
+        if(newSortBy != null) {
+            sortBy = newSortBy
+            if(currentSortBy == newSortBy) {
+                if(currentOrder == "asc") {
+                    order = "desc"
+                } else {
+                    order = "asc"
+                }
+            } else {
+                order = "asc"
+            }
+        }
+
+        // Generate the link
+        routes.EventController.events(newPage, sortBy, order, currentFilter)
+
+    }
+
+    @**********************************
+    * Helper generating table headers *
+    ***********************************@
+    @header(key:String, title:String) = {
+        <th class="@key.replace("../../../public","_") header @if(currentSortBy == key) @{if(currentOrder == "asc") "headerSortDown" else "headerSortUp"}">
+            <a href="@link(0, key)">@title</a>
+        </th>
+    }
+@main("Don't forget your equipment!!") {
+
+    <h1 id="homeTitle">@Messages("events.list.title", currentPage.getTotalRowCount)</h1>
+
+        @if(flash.containsKey("success")) {
+            <div class="alert-message success">
+                <strong>Done!</strong> @flash.get("success")
+            </div>
+        }
+
+        @if(flash.containsKey("error")) {
+            <div class="alert-message error">
+                <strong>Done!</strong> @flash.get("error")
+            </div>
+        }
+
+        <div id="actions">
+
+            <form action="@link(0, "name")" method="GET">
+                <input type="search" id="searchbox" name="f" value="@currentFilter" placeholder="Filter by event name...">
+                <input type="submit" id="searchsubmit" value="Filter by name" class="btn primary">
+            </form>
+
+            <a class="btn success" id="add" href="@routes.EventController.create()">Add a new event</a>
+
+        </div>
+
+        @if(currentPage.getTotalRowCount == 0) {
+
+            <div class="well">
+                <em>Nothing to display</em>
+            </div>
+
+        } else {
+
+            <article  class="events">
+                @for(event <- currentPage.getList) {
+                        <li class="event-item" data-event-id="@event.id">
+                            <header>
+                                <h4><a href="#@routes.EventController.edit(event.id)">@event.name</a></h4>
+                                <div class="event-header-data">
+                                    @if(event.startDate != null){
+                                        <span>Start date:</span>
+                                        <time datetime="@event.startDate">@event.startDate.format("MMM dd yyyy")</time>
+                                    }
+                                    @if(event.endDate != null){
+                                        <span>End date:</span>
+                                        <time datetime="@event.endDate">@event.endDate.format("MMM dd yyyy")</time>
+                                    }
+                                </div>
+                                <div class="event-header-action">
+                                    <a class="print-pdf" id="print-pdf-@event.id" href="@routes.EventController.create()"></a>
+                                    <form action="@routes.EventController.viewPdf(event.nameId)" method="GET">
+                                        <input type="image"/>
+                                    </form>
+                                    @form(routes.EventController.delete(event.id)) {
+                                        <input type="submit" value=" " class="deletePicture"/>
+                                    }
+                                </div>
+
+                            </header>
+                            <ul>
+                                <li>Product 1</li>
+                                <li>Product 2</li>
+                                <li>Product 3</li>
+                                <li>Product 4</li>
+                            </ul>
+                        </li>
+                }
+            </article>
+
+            <div id="pagination" class="pagination">
+                <ul>
+                    @if(currentPage.hasPrev) {
+                        <li class="prev">
+                            <a href="@link(currentPage.getPageIndex - 1, null)">&larr; Previous</a>
+                        </li>
+                    } else {
+                        <li class="prev disabled">
+                            <a>&larr; Previous</a>
+                        </li>
+                    }
+                    <li class="current">
+                        <a>Displaying @currentPage.getDisplayXtoYofZ(" to "," of ")</a>
+                    </li>
+                    @if(currentPage.hasNext) {
+                        <li class="next">
+                            <a href="@link(currentPage.getPageIndex + 1, null)">Next &rarr;</a>
+                        </li>
+                    } else {
+                        <li class="next disabled">
+                            <a>Next &rarr;</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+        }
+}

@@ -4,6 +4,7 @@ import com.avaje.ebean.Page;
 import com.avaje.ebean.validation.NotNull;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
+import helpers.common.ModelUtil;
 import play.Logger;
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
@@ -47,7 +48,7 @@ public class Product extends Model {
 
     public Integer quantity;
 
-    public Integer remaining_quantity;
+    public Integer remainingQuantity;
     public String owner;
     public String room;
     public String location;
@@ -135,7 +136,7 @@ public class Product extends Model {
         this.nameId = makeId(name);
         this.description = description;
         this.quantity = quantity;
-        this.remaining_quantity = quantity;
+        this.remainingQuantity = quantity;
         this.owner = owner;
         this.room = room;
         this.location = location;
@@ -201,7 +202,7 @@ public class Product extends Model {
 
     private static String makeId(String name){
         Preconditions.checkArgument(name != null && !"".equals(name.trim()), "Name of Product mustn't be null");
-        return name.trim().toUpperCase();
+        return ModelUtil.makeId(name);
     }
 
     @Override
@@ -254,7 +255,7 @@ public class Product extends Model {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", quantity=" + quantity +
-                ", remaining_quantity=" + remaining_quantity +
+                ", remainingQuantity=" + remainingQuantity +
                 ", owner='" + owner + '\'' +
                 ", room='" + room + '\'' +
                 ", location='" + location + '\'' +

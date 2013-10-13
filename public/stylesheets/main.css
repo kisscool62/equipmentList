@@ -116,4 +116,74 @@ input[type="submit"].deletePicture {
     color: #666;
 }
 
+li{
+    position: relative;
+    padding: 4px 20px 4px 7px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+
+}
+
+.events .event-item {
+  border: 1px solid #9ba5ad;
+  background: #dbe1e5;
+  border-radius: 5px;
+  margin: 0 0 20px;
+}
+
+.events .event-item > header > .event-header-data time {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 15px;
+    background: #accfe8 url('/assets/images/clock.png') no-repeat 1px 1px;
+    border: 1px solid #73a4ca;
+    color: #246fa9;
+    font-size: 11px;
+    padding: 0 4px 1px 15px;
+}
+
+.events .event-item > header > .event-header-data span {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 13px;
+    padding: 0 4px 1px 15px;
+    font-weight: bold;
+}
+
+.events .event-item > header {
+  border-radius: 5px 5px 0 0;
+  background: #f2f5f8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f5f8), to(#dfe2e6));
+  background-image: -moz-linear-gradient(top, #f2f5f8, #dfe2e6);
+  border-bottom: inherit;
+  padding: 4px 7px;
+}
+
+.events .event-item > header .event-header-data{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.events .event-item > header .event-header-action{
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.events .event-item > ul {
+    border-radius: 5px 5px 0 0;
+    background: #f2f5f8;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f5f8), to(#dfe2e6));
+    background-image: -moz-linear-gradient(top, #f2f5f8, #dfe2e6);
+    border-bottom: inherit;
+    padding: 0;
+}
+
+.events .event-item > header h4 {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  color: #7a8a99;
+  text-shadow: 1px 1px 0 #fff;
+}
+
 
