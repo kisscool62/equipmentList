@@ -65,4 +65,8 @@ public class Event extends Model{
                 .findPagingList(pageSize)
                 .getPage(page);
     }
+
+    public static Event findByNameId(String nameId){
+        return find.where().ilike("nameId", nameId).findUnique();
+    }
 }

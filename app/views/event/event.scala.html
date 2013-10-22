@@ -86,15 +86,16 @@
                                         <time datetime="@event.endDate">@event.endDate.format("MMM dd yyyy")</time>
                                     }
                                 </div>
-                                <div class="event-header-action">
-                                    <a class="print-pdf" id="print-pdf-@event.id" href="@routes.EventController.create()"></a>
-                                    <form action="@routes.EventController.viewPdf(event.nameId)" method="GET">
-                                        <input type="image"/>
+                                <nav class="event-header-action">
+                                    <a class="floating-right"></a>
+                                    <form action="@routes.EventController.view(event.nameId)" method="GET">
+                                        <input type="image" class="print-pdf floating-right" value = " "/>
                                     </form>
                                     @form(routes.EventController.delete(event.id)) {
-                                        <input type="submit" value=" " class="deletePicture"/>
+                                        <input type="submit" value=" " class="deletePicture floating-right"/>
                                     }
-                                </div>
+                                    <div class="clear"/>
+                                </nav>
 
                             </header>
                             <ul>

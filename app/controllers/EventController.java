@@ -5,8 +5,10 @@ import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
+import util.pdf.PDF;
 import views.html.event.createForm;
 import views.html.event.event;
+import views.html.event.eventDetailsForPDF;
 
 import static play.data.Form.form;
 
@@ -76,8 +78,14 @@ public class EventController extends Controller {
         return Results.TODO;
     }
 
+    public static Result view(String nameId){
+        Event event = Event.findByNameId(nameId);
+        return ok(eventDetailsForPDF.render(event));
+    }
+
 
     public static Result viewPdf(String nameId) {
-        return Results.TODO;
+        Event event = Event.findByNameId(nameId);
+        return PDF.ok(eventDetailsForPDF.render(event));
     }
 }

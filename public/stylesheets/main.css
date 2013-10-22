@@ -88,9 +88,24 @@ input[type="submit"].deletePicture {
     width: 16px;
 }
 
+input[type="image"].print-pdf {
+    background-image: url('/assets/images/page_white_acrobat_16x16.png');
+    background-repeat: no-repeat;
+    border: none;
+    height: 16px;
+    padding: 0;
+    width: 16px;
+}
+
 .floating{
     position: relative;
     float: left;
+    display: inline;
+}
+
+.floating-right {
+    position: relative;
+    float: right;
     display: inline;
 }
 
@@ -119,8 +134,13 @@ input[type="submit"].deletePicture {
 li{
     position: relative;
     padding: 4px 20px 4px 7px;
-    border-bottom: 1px solid rgba(0,0,0,.05);
+    border: 1px solid rgba(0,0,0,.05);
 
+}
+
+.width-pdf{
+    width: 600px;
+    margin: 40px 40px 40px 40px;
 }
 
 .events .event-item {
@@ -149,13 +169,20 @@ li{
     font-weight: bold;
 }
 
+.events .event-item > header > .event-header-action input {
+    /*float: left;*/
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+
 .events .event-item > header {
-  border-radius: 5px 5px 0 0;
-  background: #f2f5f8;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f5f8), to(#dfe2e6));
-  background-image: -moz-linear-gradient(top, #f2f5f8, #dfe2e6);
-  border-bottom: inherit;
-  padding: 4px 7px;
+    border-radius: 5px 5px 0 0;
+    background: #f2f5f8;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f5f8), to(#dfe2e6));
+    background-image: -moz-linear-gradient(top, #f2f5f8, #dfe2e6);
+    padding: 4px 7px;
+    border: 1px solid rgba(0,0,0,.05);
 }
 
 .events .event-item > header .event-header-data{
@@ -174,8 +201,8 @@ li{
     background: #f2f5f8;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f5f8), to(#dfe2e6));
     background-image: -moz-linear-gradient(top, #f2f5f8, #dfe2e6);
-    border-bottom: inherit;
     padding: 0;
+    border: 1px solid rgba(0,0,0,.05);
 }
 
 .events .event-item > header h4 {
@@ -184,6 +211,14 @@ li{
   font-weight: bold;
   color: #7a8a99;
   text-shadow: 1px 1px 0 #fff;
+}
+
+.arial {
+    font-family: Arial;
+}
+
+.blue {
+	color: blue;
 }
 
 

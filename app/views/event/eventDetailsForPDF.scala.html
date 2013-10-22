@@ -1,0 +1,37 @@
+@(event: Event)
+
+@pdf(event.name + " details") {
+    <div class="events width-pdf">
+        <div class="event-item">
+
+            <h4><a href="#@routes.EventController.edit(event.id)">@event.name</a></h4>
+            <div class="event-header-data">
+                @if(event.startDate != null) {
+                    <span>Start date:</span>
+                    <span>@event.startDate.format("MMM dd yyyy")</span>
+                }
+                @if(event.endDate != null) {
+                    <span>End date:</span>
+                    <span>@event.endDate.format("MMM dd yyyy")</span>
+                }
+            </div>
+
+            <a class="floating-right"></a>
+            <form action="@routes.EventController.view(event.nameId)" method="GET">
+                <input type="image" class="print-pdf floating-right" value = " "/>
+            </form>
+
+
+            <ul>
+                <li>Product 1 <input type="checkbox" class="floating-right"/></li>
+                <li>Product 2 <input type="checkbox" class="floating-right"/></li>
+                <li>Product 3 <input type="checkbox" class="floating-right"/></li>
+                <li>Product 4 <input type="checkbox" class="floating-right"/></li>
+            </ul>
+
+        </div>
+    </div>
+}
+
+
+
