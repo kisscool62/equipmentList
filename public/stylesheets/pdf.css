@@ -1,0 +1,50 @@
+.width-pdf{
+    width: 600px;
+    margin: 40px 40px 40px 40px;
+}
+
+.events .event-item {
+  border: 2px solid #9ba5ad;
+  background: white;
+  border-radius: 5px;
+  margin: 0 0 20px;
+}
+
+.events .event-item > ul {
+    border-radius: 5px 5px 0 0;
+    background: white;
+    padding: 0;
+    border: 1px solid rgba(0,0,0,.05);
+}
+
+li{
+    position: relative;
+    padding: 4px 20px 4px 7px;
+    border: 1px solid rgba(0,0,0,.05);
+
+}
+
+.floating-right {
+    position: relative;
+    float: right;
+    display: inline;
+}
+
+.checkbox-list {
+    border: 2px solid rgba(0,0,0,.05);
+    width: 20px;
+    height: 20px;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+html, body {
+    background-color: rgb(255, 255, 255);
+}

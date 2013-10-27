@@ -171,6 +171,7 @@ public class PDF {
 			myUserAgent.setSharedContext(renderer.getSharedContext());
 			renderer.getSharedContext().setUserAgentCallback(myUserAgent);
 			Document document = XMLResource.load(reader).getDocument();
+
 			renderer.setDocument(document, documentBaseURL);
 			renderer.layout();
 			renderer.createPDF(os);

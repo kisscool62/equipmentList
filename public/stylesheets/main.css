@@ -139,8 +139,8 @@ li{
 }
 
 .width-pdf{
-    width: 600px;
-    margin: 40px 40px 40px 40px;
+    width: 900px;
+    margin: 40px 10px 40px 40px;
 }
 
 .events .event-item {
@@ -169,8 +169,24 @@ li{
     font-weight: bold;
 }
 
+.events .event-item > header > .event-header-data div {
+    display: inline-block;
+    vertical-align: middle;
+    height:20px;
+    float:right;
+}
+
+.events .event-item > header > .event-header-data label {
+    display: inline-block;
+    vertical-align: middle;
+    height:20px;
+    width:200px;
+    float:right;
+    padding-top: 0;
+}
+
+
 .events .event-item > header > .event-header-action input {
-    /*float: left;*/
     margin-left: 6px;
     margin-right: 6px;
 }
@@ -188,6 +204,13 @@ li{
 .events .event-item > header .event-header-data{
     display: inline-block;
     vertical-align: middle;
+    padding-right: 15px;
+}
+
+.events-header-data-pdf{
+    width: 500px;
+    height:30px;
+    padding-top:10px;
 }
 
 .events .event-item > header .event-header-action{
