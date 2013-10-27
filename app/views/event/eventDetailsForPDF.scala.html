@@ -4,25 +4,28 @@
     <div class="events width-pdf">
         <div class="event-item">
 
-            <h4><a href="#@routes.EventController.edit(event.id)">@event.name</a></h4>
-            <div class="event-header-data">
-                @if(event.startDate != null) {
-                    <span>Start date:</span>
-                    <span>@event.startDate.format("MMM dd yyyy")</span>
-                }
+            <h4>@event.name</h4>
+            @*<div class="event-header-data events-header-data-pdf floating-right">*@
                 @if(event.endDate != null) {
-                    <span>End date:</span>
-                    <span>@event.endDate.format("MMM dd yyyy")</span>
+                    <label>End date:
+                        <span name="event-endDate">@event.endDate.format("MMM dd yyyy")</span>
+                    </label>
                 }
-            </div>
+                @if(event.startDate != null) {
+                    <label>Start date:
+                        <span name="event-startDate">@event.startDate.format("MMM dd yyyy")</span>
+                    </label>
+                }
 
-            <a class="floating-right"></a>
+                <div class="clear"/>
+            @*</div>*@
+
 
             <ul>
-                <li>Product 1 d<div class="checkbox-list"></div></li>
-                <li>Product 2a <div class="checkbox-list"></div></li>
-                <li>Product 3 <div class="checkbox-list"></div></li>
-                <li>Product 4 <div class="checkbox-list"></div></li>
+                <li>Product 1<div class="checkbox-list floating-right">&nbsp;</div></li>
+                <li>Product 2<div class="checkbox-list floating-right">&nbsp;</div></li>
+                <li>Product 3<div class="checkbox-list floating-right">&nbsp;</div></li>
+                <li>Product 4<div class="checkbox-list floating-right">&nbsp;</div></li>
             </ul>
 
         </div>
