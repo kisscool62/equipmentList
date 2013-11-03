@@ -27,6 +27,7 @@ POST        /upload                             controllers.ProductController.up
 GET         /events                             controllers.EventController.events(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
 GET         /events/new                         controllers.EventController.create()
 GET         /events/:nameId.pdf                 controllers.EventController.viewPdf(nameId: String)
+GET         /events/:nameId.pdfhtml             controllers.EventController.viewPdfHtml(nameId: String)
 GET         /events/:nameId                     controllers.EventController.view(nameId: String)
 POST        /events                             controllers.EventController.save()
 POST        /events/:id                         controllers.EventController.edit(id: Long)

@@ -84,6 +84,11 @@ public class EventController extends Controller {
         return ok(eventDetails.render(event));
     }
 
+    public static Result viewPdfHtml(String nameId){
+        Event event = Event.findByNameId(nameId);
+        return ok(views.html.event.eventDetailsForPDFHTML.render(event));
+    }
+
 
     public static Result viewPdf(String nameId) {
         Event event = Event.findByNameId(nameId);
