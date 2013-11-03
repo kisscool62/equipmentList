@@ -23,7 +23,7 @@ POST        /products/:id/delete                controllers.ProductController.de
 GET         /products/deleteAll                 controllers.ProductController.deleteAll()
 POST        /upload                             controllers.ProductController.upload()
 
-#Categories
+#Events
 GET         /events                             controllers.EventController.events(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
 GET         /events/new                         controllers.EventController.create()
 GET         /events/:nameId.pdf                 controllers.EventController.viewPdf(nameId: String)
