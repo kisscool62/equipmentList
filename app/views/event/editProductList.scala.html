@@ -1,0 +1,50 @@
+@(event: Event, products: List[Product])
+
+@import helper._
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
+
+@main("Edit Product list") {
+
+    <h1>Edit event product list</h1>
+
+    @if(flash.containsKey("success")) {
+        <div class="alert-message success">
+            <strong>Done!</strong> @flash.get("success")
+        </div>
+    }
+
+    @if(flash.containsKey("error")) {
+        <div class="alert-message error">
+            <strong>Done!</strong> @flash.get("error")
+        </div>
+    }
+    
+    @form(routes.EventController.saveOrSaveAndLinkProducts()) {
+        
+        <fieldset>
+        
+            <span>@event.name</span>
+            <span>@event.startDate</span>
+            <span>@event.endDate</span>
+        </fieldset>
+
+        <div>
+            <select id="free-products" name="free-products" multiple="multiple">
+                @for(product<-products){
+                    <option value="product.id">product.name</option>
+                }
+
+            </select>
+        </div>
+        
+        <div class="actions">
+            <input id="saveOrSaveAndLinkId" name="saveOrSaveAndLinkId" type="hidden" value="save"/>
+            <input type="submit" value="Create this event" class="btn primary"> or
+            <input type="submit" value="Create this event and link products to this event" class="btn primary" onclick="saveAndLink()"> or
+            <a href="@routes.EventController.events()" class="btn">Cancel</a>
+        </div>
+        
+    }
+    
+}

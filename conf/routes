@@ -16,6 +16,7 @@ POST        /equipments/:id/delete              controllers.Application.deleteEq
 
 # Products
 GET         /products                           controllers.ProductController.products(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
+GET         /productsQuick                      controllers.ProductController.productsQuick(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
 GET         /products/new                       controllers.ProductController.create()
 POST        /products                           controllers.ProductController.save()
 POST        /products/:id                       controllers.ProductController.edit(id: Long)
@@ -29,12 +30,13 @@ GET         /events/new                         controllers.EventController.crea
 GET         /events/:nameId.pdf                 controllers.EventController.viewPdf(nameId: String)
 GET         /events/:nameId.pdfhtml             controllers.EventController.viewPdfHtml(nameId: String)
 GET         /events/:nameId                     controllers.EventController.view(nameId: String)
-POST        /events                             controllers.EventController.save()
+POST        /events                             controllers.EventController.saveOrSaveAndLinkProducts()
 POST        /events/:id                         controllers.EventController.edit(id: Long)
 POST        /events/:id/delete                  controllers.EventController.delete(id: Long)
 
 #Categories
 GET         /categories                         controllers.CategoryController.categories(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
+GET         /categories/                        controllers.CategoryController.categories(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
 GET         /categories/new                     controllers.CategoryController.create()
 POST        /categories                         controllers.CategoryController.save()
 POST        /categories/:id                     controllers.CategoryController.editCategory(id: String)

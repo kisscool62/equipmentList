@@ -10,6 +10,7 @@ import play.mvc.Result;
 import play.mvc.Results;
 import views.html.product.createForm;
 import views.html.product.product;
+import views.html.product.quickProductList;
 
 import java.io.File;
 import java.util.List;
@@ -40,6 +41,15 @@ public class ProductController extends Controller {
     public static Result products(int page, String sortBy, String order, String filter) {
         return ok(
             product.render(
+                    Product.page(page, 20, sortBy, order, filter),
+                    sortBy, order, filter
+            )
+        );
+    }
+
+    public static Result productsQuick(int page, String sortBy, String order, String filter) {
+        return ok(
+            quickProductList.render(Product.find.all(),
                     Product.page(page, 20, sortBy, order, filter),
                     sortBy, order, filter
             )
