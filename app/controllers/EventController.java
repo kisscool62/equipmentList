@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Event;
+import models.Product;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -10,6 +11,8 @@ import views.html.event.createForm;
 import views.html.event.event;
 import views.html.event.eventDetails;
 import views.html.event.eventDetailsForPDF;
+
+import java.util.List;
 
 import static play.data.Form.form;
 
@@ -47,9 +50,7 @@ public class EventController extends Controller {
      */
     public static Result create() {
         Form<Event> eventForm= form(Event.class);
-        return ok(
-            createForm.render(eventForm)
-        );
+        return ok(createForm.render(eventForm));
     }
 
     /**
@@ -69,6 +70,33 @@ public class EventController extends Controller {
             flash("error", "Event " + eventCandidate.name + " was not created because exists");
         }
         return GO_HOME;
+    }
+
+    /**
+     * Handle the 'new event form' submission
+     */
+    public static Result saveOrSaveAndLinkProducts() {
+        Form<Event> eventForm = form(Event.class).bindFromRequest();
+        if(eventForm.hasErrors()) {
+            return badRequest(createForm.render(eventForm));
+        }
+        final Event eventCandidate = eventForm.get();
+        final boolean wasSaved = true;
+        eventCandidate.save();
+        if(wasSaved){
+            flash("success", "Event " + eventCandidate.name + " has been created");
+        }else{
+            flash("error", "Event " + eventCandidate.name + " was not created because exists");
+        }
+        if("save".equals(eventForm.data().get("saveOrSaveAndLink"))){
+            List<Product> products = findFreeProducts(eventCandidate);
+            return ok(views.html.event.editProductList.render(eventCandidate, products));
+        }
+        return GO_HOME;
+    }
+
+    private static List<Product> findFreeProducts(Event eventCandidate) {
+        return Product.find.all();
     }
 
     public static Result edit(Long id) {

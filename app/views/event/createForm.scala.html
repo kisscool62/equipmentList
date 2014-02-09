@@ -5,19 +5,40 @@
 @implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
 
 @main("Create a new Event") {
+
+    <script language="JavaScript">
+        function saveAndLink(){
+            document.getElementById("saveOrSaveAndLink").value = "saveAndLink";
+        }
+    </script>
     
     <h1>Add a event</h1>
+
+    @if(flash.containsKey("success")) {
+        <div class="alert-message success">
+            <strong>Done!</strong> @flash.get("success")
+        </div>
+    }
+
+    @if(flash.containsKey("error")) {
+        <div class="alert-message error">
+            <strong>Done!</strong> @flash.get("error")
+        </div>
+    }
     
-    @form(routes.EventController.save()) {
+    @form(routes.EventController.saveOrSaveAndLinkProducts()) {
         
         <fieldset>
         
             @inputText(eventForm("name"), '_label -> "Event name")
-
+            @inputDate(eventForm("startDate"), '_label -> "Start Date")
+            @inputDate(eventForm("endDate"), '_label -> "End Date")
         </fieldset>
         
         <div class="actions">
+            <input id="saveOrSaveAndLinkId" name="saveOrSaveAndLinkId" type="hidden" value="save"/>
             <input type="submit" value="Create this event" class="btn primary"> or
+            <input type="submit" value="Create this event and link products to this event" class="btn primary" onclick="saveAndLink()"> or
             <a href="@routes.EventController.events()" class="btn">Cancel</a>
         </div>
         
