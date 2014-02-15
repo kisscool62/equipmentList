@@ -2,6 +2,7 @@ package models;
 
 import com.avaje.ebean.Page;
 import com.avaje.ebean.validation.NotNull;
+import com.avaje.ebeaninternal.server.expression.IdInExpression;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Maps;
 import helpers.common.ModelUtil;
@@ -57,7 +58,18 @@ public class Product extends Model {
     public Double euroPrice;
     public Double usdPrice;
 
-    public static Finder<Long, Product> find = new Finder<Long, Product>(Long.class, Product.class);
+    public static class ProductFinder extends Finder<Long, Product>{
+
+        public ProductFinder(){
+                super(Long.class, Product.class);
+        }
+
+        public List<Product> findByIds(List<Long> ids){
+            return super.where(new IdInExpression(ids)).orderBy("location").orderBy("name").findList();
+        }
+    }
+
+    public static ProductFinder find = new ProductFinder();
 
     public static int deleteAll() {
         final List<Product> products = find.all();

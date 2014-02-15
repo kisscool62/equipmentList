@@ -16,7 +16,9 @@ POST        /equipments/:id/delete              controllers.Application.deleteEq
 
 # Products
 GET         /products                           controllers.ProductController.products(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
-GET         /productsQuick                      controllers.ProductController.productsQuick(p:Int ?= 0, s ?= "nameId", o ?= "asc", f ?= "")
+GET         /productsQuick                      controllers.ProductController.productsQuick()
+#GET         /productsQuick.pdf                  controllers.ProductController.printPdf()
+POST        /productsQuick                      controllers.ProductController.printPdf()
 GET         /products/new                       controllers.ProductController.create()
 POST        /products                           controllers.ProductController.save()
 POST        /products/:id                       controllers.ProductController.edit(id: Long)

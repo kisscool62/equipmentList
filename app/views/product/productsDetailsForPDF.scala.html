@@ -1,0 +1,30 @@
+@(products: List[Product], begin: Integer, end: Integer)
+
+@pdf("Elements de " + begin + " a " + end) {
+    <div class="event-item width-pdf">
+        <div class="logoAndEvent">
+            <div id="logo" class="floating">
+
+            </div>
+            <div class="event-title floating">
+                <div><h4>Elements de @begin a @end</h4></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="event-header-data">
+
+        </div>
+
+        <div class="event-product-list">
+            <ul>
+                @for(product <- products) {
+                    <li>@product.name | @product.location<div class="checkbox-list floating-right">&nbsp;</div></li>
+                }
+            </ul>
+        </div>
+
+    </div>
+}
+
+
+

@@ -1,19 +1,29 @@
 package controllers;
 
+import com.google.common.base.Predicate;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import helpers.excel.ProductUploader;
 import models.Product;
+import models.SelectableProduct;
 import play.Logger;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
+import util.pdf.PDF;
 import views.html.product.createForm;
 import views.html.product.product;
+import views.html.product.productsDetailsForPDF;
 import views.html.product.quickProductList;
 
+import javax.annotation.Nullable;
 import java.io.File;
 import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static play.data.Form.form;
 
@@ -23,6 +33,7 @@ import static play.data.Form.form;
  * Time: 10:21 AM
  */
 public class ProductController extends Controller {
+    private static final Pattern productPattern = Pattern.compile("product-([0-9]+)");
 
     /**
      * This result directly redirect to application home.
@@ -47,13 +58,42 @@ public class ProductController extends Controller {
         );
     }
 
-    public static Result productsQuick(int page, String sortBy, String order, String filter) {
-        return ok(
-            quickProductList.render(Product.find.all(),
-                    Product.page(page, 20, sortBy, order, filter),
-                    sortBy, order, filter
-            )
-        );
+    public static Result productsQuick() {
+        final Form<Product> productForm = form(Product.class);
+        final List<Product> products = Product.find.all();
+        java.util.List<SelectableProduct> selectableProducts = SelectableProduct.toSelectableProductsList(products);
+        return ok(quickProductList.render(productForm, selectableProducts));
+    }
+
+    public static Result printPdf(){
+        Form<Product> productForm = form(Product.class).bindFromRequest();
+        final Map<String,String> data = productForm.data();
+        final Map<String, String> selectedProductsId = filterNotProductInput(data);
+        final List<Long> productIdList = extractProductId(selectedProductsId);
+
+        return  PDF.ok(productsDetailsForPDF.render(Product.find.findByIds(productIdList), 0, 10));
+    }
+
+    protected static List<Long> extractProductId(Map<String, String> selectedProductsId) {
+        List<Long> productIdList = Lists.newArrayList();
+        for (String productId : selectedProductsId.keySet()) {
+
+            final Matcher matcher = productPattern.matcher(productId);
+            if(matcher.matches()){
+                productIdList.add(Long.valueOf(matcher.group(1)));
+            }
+        }
+        return productIdList;
+    }
+
+    private static Map<String, String> filterNotProductInput(Map<String, String> data) {
+        return Maps.filterKeys(data, new Predicate<String>() {
+            @Override
+            public boolean apply(@Nullable String s) {
+                final Matcher matcher = productPattern.matcher(s);
+                return matcher.matches();
+            }
+        });
     }
 
     public static Result upload() {
