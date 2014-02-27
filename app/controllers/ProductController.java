@@ -38,7 +38,6 @@ public class ProductController extends Controller {
     /**
      * This result directly redirect to application home.
      */
-//    public static Result GO_HOME = redirect(routes.ProductController.products(0, "nameId", "asc", ""));
     public static Result GO_HOME = redirect(routes.Application.index());
 
     /**
@@ -71,7 +70,9 @@ public class ProductController extends Controller {
         final Map<String, String> selectedProductsId = filterNotProductInput(data);
         final List<Long> productIdList = extractProductId(selectedProductsId);
 
-        return  PDF.ok(productsDetailsForPDF.render(Product.find.findByIds(productIdList), 0, 10));
+        final List<Product> productList = Product.find.findByIds(productIdList);
+        final List<List<Product>> partition = Lists.partition(productList, 30);
+        return  PDF.ok(productsDetailsForPDF.render(partition));
     }
 
     protected static List<Long> extractProductId(Map<String, String> selectedProductsId) {

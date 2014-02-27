@@ -22,6 +22,14 @@ section#main .topRight {
     top: 70px;
 }
 
+input.range_select_button {
+    width:110px;
+}
+
+.centered_text {
+    text-align: center;
+}
+
 table.computers em {
     color: #aaa;
 }
