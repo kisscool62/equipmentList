@@ -1,0 +1,4 @@
+categories=Categories
+types=Types de materiel
+products=Produits
+events=Evenements
