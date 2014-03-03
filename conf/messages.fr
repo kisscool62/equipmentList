@@ -1,4 +1,4 @@
-categories=Categories
-types=Types de materiel
-products=Produits
-events=Evenements
+menu.categories=Categories
+menu.types=Types de materiel
+menu.products=Produits
+menu.events=Evenements

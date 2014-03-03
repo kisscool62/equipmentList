@@ -1,4 +1,4 @@
-categories=Categories
-types=Types
-products=Products
-events=Events
+menu.categories=Categories
+menu.types=Types
+menu.products=Products
+menu.events=Events
