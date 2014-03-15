@@ -80,7 +80,7 @@ public class Brand extends Model {
     }
 
     private static ExpressionList<Brand> createExpressionFindByNameId(String nameId) {
-        return find.where().ilike("nameId", "%" + nameId + "%");
+        return find.where().eq("nameId", nameId);
     }
 
     private static Brand create(String brandName) {

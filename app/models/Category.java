@@ -131,7 +131,7 @@ public class Category extends Model {
     }
 
     private static ExpressionList<Category> createExpressionFindByNameId(String nameId) {
-        return find.where().ilike("nameId", "%" + nameId + "%");
+        return find.where().eq("nameId", nameId);
     }
 
 

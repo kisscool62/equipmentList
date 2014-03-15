@@ -67,6 +67,6 @@ public class Event extends Model{
     }
 
     public static Event findByNameId(String nameId){
-        return find.where().ilike("nameId", nameId).findUnique();
+        return find.where().eq("nameId", nameId).findUnique();
     }
 }

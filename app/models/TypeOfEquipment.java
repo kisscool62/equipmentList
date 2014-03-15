@@ -130,7 +130,7 @@ public class TypeOfEquipment extends Model {
        }
 
        private static ExpressionList<TypeOfEquipment> createExpressionFindByNameId(String nameId) {
-           return find.where().ilike("nameId", "%" + nameId + "%");
+           return find.where().eq("nameId", nameId);
        }
 
 }
