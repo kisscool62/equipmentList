@@ -4,21 +4,21 @@
 
 @implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
 
-@main("Create a new Category") {
+@main(play.i18n.Messages.get("category.addCategory")) {
     
-    <h1>Add a category</h1>
+    <h2>@Messages(play.i18n.Messages.get("category.addCategory"))</h2>
     
     @form(routes.CategoryController.save()) {
         
         <fieldset>
         
-            @inputText(categoryForm("name"), '_label -> "Category name")
+            @inputText(categoryForm("name"), '_label -> play.i18n.Messages.get("name"))
 
         </fieldset>
         
         <div class="actions">
-            <input type="submit" value="Create this category" class="btn primary"> or
-            <a href="@routes.CategoryController.categories()" class="btn">Cancel</a>
+            <input type="submit" value="@Messages("create")" class="btn primary"> @Messages("or")
+            <a href="@routes.CategoryController.categories()" class="btn">@Messages("cancel")</a>
         </div>
         
     }

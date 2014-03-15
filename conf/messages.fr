@@ -1,4 +1,13 @@
+create=Créer
+cancel=Retour
+or=ou
+name=Nom
+
 menu.categories=Categories
 menu.types=Types de materiel
 menu.products=Produits
 menu.events=Evenements
+
+category.addCategory=Créer une catégorie
+category.categoryCreated=La catégorie "%s" a été créée
+category.categoryNotCreated=La catégorie "%s" n'''a pas été créée car elle existait déjà

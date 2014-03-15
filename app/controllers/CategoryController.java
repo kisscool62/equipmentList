@@ -1,5 +1,6 @@
 package controllers;
 
+import helpers.common.Messages;
 import models.Category;
 import play.data.Form;
 import play.mvc.Controller;
@@ -60,9 +61,9 @@ public class CategoryController extends Controller {
         final Category categoryCandidate = categoryForm.get();
         final boolean wasSaved = categoryCandidate.saveOrReturnFalseIfExists();
         if(wasSaved){
-            flash("success", "Category " + categoryCandidate.name + " has been created");
+            flash("success", Messages.get("category.categoryCreated", categoryCandidate.name));
         }else{
-            flash("error", "Category " + categoryCandidate.name + " was not created because exists");
+            flash("error", Messages.get("category.categoryNotCreated", categoryCandidate.name));
         }
         return GO_HOME;
     }
