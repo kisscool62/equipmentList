@@ -2,6 +2,12 @@ create=Créer
 cancel=Retour
 or=ou
 name=Nom
+filterByName=Filtrer par nom
+displaying=Affiche
+to=de
+of=sur
+next=Suivant
+previous=Précédent
 
 menu.categories=Categories
 menu.types=Types de materiel
@@ -11,3 +17,4 @@ menu.events=Evenements
 category.addCategory=Créer une catégorie
 category.categoryCreated=La catégorie "%s" a été créée
 category.categoryNotCreated=La catégorie "%s" n'''a pas été créée car elle existait déjà
+category.listCategory=Liste des catégories
