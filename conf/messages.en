@@ -8,6 +8,18 @@ to=to
 of=of
 next=Next
 previous=Previous
+category=Category
+typeOfEquipment=Type of equipment
+brand=Brand
+description=Description
+quantity=Quantity
+owner=Owner
+room=Room
+location=Location
+state=State
+dateOfPurchase=Date of purchase
+euroPrice=Price EUR
+usdPrice=Price USD
 
 menu.categories=Categories
 menu.types=Types
@@ -18,3 +30,7 @@ category.addCategory=Create a category
 category.categoryCreated=Category "%s" has been created
 category.categoryNotCreated="Category "%s" was not created because exists"
 category.listCategory=Category list
+
+event.addEvent=Create an event
+
+product.addProduct=Add a product

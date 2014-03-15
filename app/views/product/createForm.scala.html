@@ -4,9 +4,9 @@
 
 @implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
 
-@main("Create a new Product") {
+@main(Messages("product.addProduct")) {
     
-    <h1>Add a product</h1>
+    <h2>@Messages("product.addProduct")</h2>
 
     @if(flash.containsKey("success")) {
         <div class="alert-message success">
@@ -25,7 +25,7 @@
 
         <fieldset class="floating">
 
-            @inputText(productForm("name"), '_label -> "Product name")
+            @inputText(productForm("name"), '_label -> Messages("name"))
 
         </fieldset>
 
@@ -36,21 +36,21 @@
             @select(
                 productForm("category.id"),
                     options(Category.options),
-                    '_label -> "Category", '_default -> "-- Choose a category --",
+                    '_label -> Messages("category"), '_default -> "-- Choose a category --",
                     '_showConstraints -> false
             )
 
             @select(
                 productForm("typeOfEquipment.id"),
                     options(TypeOfEquipment.options),
-                    '_label -> "Type of equipment", '_default -> "-- Choose a type of equipment --",
+                    '_label -> Messages("typeOfEquipment"), '_default -> "-- Choose a type of equipment --",
                     '_showConstraints -> false
             )
 
             @select(
                 productForm("brand.id"),
                     options(Brand.options),
-                    '_label -> "Brand", '_default -> "-- Choose a brand --",
+                    '_label -> Messages("brand"), '_default -> "-- Choose a brand --",
                     '_showConstraints -> false
             )
 
@@ -58,37 +58,37 @@
 
         <fieldset class="floating">
 
-            @inputText(productForm("description"), '_label -> "Description")
+            @inputText(productForm("description"), '_label -> Messages("description"))
 
-            @inputText(productForm("quantity"), '_label -> "Quantity")
+            @inputText(productForm("quantity"), '_label -> Messages("quantity"))
 
-            @inputText(productForm("owner"), '_label -> "Owner")
-
-        </fieldset>
-
-        <fieldset class="floating">
-            @inputText(productForm("room"), '_label -> "Room")
-
-            @inputText(productForm("location"), '_label -> "Location")
-
-            @inputText(productForm("state"), '_label -> "State")
+            @inputText(productForm("owner"), '_label -> Messages("owner"))
 
         </fieldset>
 
         <fieldset class="floating">
+            @inputText(productForm("room"), '_label -> Messages("room"))
 
-            @inputDate(productForm("dateOfPurchase"), '_label -> "Date of purchase")
+            @inputText(productForm("location"), '_label -> Messages("location"))
 
-            @inputDate(productForm("euroPrice"), '_label -> "Price EUR")
+            @inputText(productForm("state"), '_label -> Messages("state"))
 
-            @inputDate(productForm("usdPrice"), '_label -> "Price USD")
+        </fieldset>
+
+        <fieldset class="floating">
+
+            @inputDate(productForm("dateOfPurchase"), '_label -> Messages("dateOfPurchase"))
+
+            @inputDate(productForm("euroPrice"), '_label -> Messages("euroPrice"))
+
+            @inputDate(productForm("usdPrice"), '_label -> Messages("usdPrice"))
         </fieldset>
 
         <div class="clear"></div>
         
         <div class="actions">
-            <input type="submit" value="Create this product" class="btn primary"> or
-            <a href="@routes.ProductController.products()" class="btn">Cancel</a>
+            <input type="submit" value=@Messages("create") class="btn primary"> @Messages("or")
+            <a href="@routes.ProductController.products()" class="btn">@Messages("cancel")</a>
         </div>
         
     }

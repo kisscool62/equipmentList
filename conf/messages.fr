@@ -8,13 +8,29 @@ to=de
 of=sur
 next=Suivant
 previous=Précédent
+category=Catégorie
+typeOfEquipment=Type de matériel
+brand=Marque
+description=Description
+quantity=Quantité
+owner=Propriétaire
+room=Bureau
+location=Où
+state=Etat
+dateOfPurchase=Date d'''achat
+euroPrice=Prix EUR
+usdPrice=Prix USD
 
 menu.categories=Catégories
 menu.types=Types de matériel
-menu.products=Produits
+menu.products=Liste de matériel
 menu.events=Evénements
 
 category.addCategory=Créer une catégorie
 category.categoryCreated=La catégorie "%s" a été créée
 category.categoryNotCreated=La catégorie "%s" n'''a pas été créée car elle existait déjà
 category.listCategory=Liste des catégories
+
+event.addEvent=Créer un événement
+
+product.addProduct=Ajouter un matériel
