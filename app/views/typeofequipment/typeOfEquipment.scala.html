@@ -35,9 +35,9 @@
             <a href="@link(0, key)">@title</a>
         </th>
     }
-@main("Don't forget your equipment!!") {
+@main(Messages("typeOfEquipment.listTypeOfEquipments")) {
 
-    <h1 id="homeTitle">@Messages("typesOfEquipment.list.title", currentPage.getTotalRowCount)</h1>
+    <h2 id="homeTitle">@Messages(Messages("typeOfEquipment.listTypeOfEquipments"), currentPage.getTotalRowCount)</h2>
 
     @if(flash.containsKey("success")) {
         <div class="alert-message success">
@@ -54,19 +54,19 @@
     <div id="actions">
 
         <form action="@link(0, "name")" method="GET">
-            <input type="search" id="searchbox" name="f" value="@currentFilter" placeholder="Filter by type name...">
-            <input type="submit" id="searchsubmit" value="Filter by name" class="btn primary">
+            <input type="search" id="searchbox" name="f" value="@currentFilter" placeholder="@Messages("filterByName")...">
+            <input type="submit" id="searchsubmit" value="@Messages("filterByName")" class="btn primary">
         </form>
 
         <a class="btn success" id="add" href="@routes.TypeOfEquipmentController.create()">
-            Add a new type of equipment</a>
+            @Messages("typeOfEquipment.addTypeOfEquipment")</a>
 
     </div>
 
     @if(currentPage.getTotalRowCount == 0) {
 
         <div class="well">
-            <em>Nothing to display</em>
+            <em>@Messages("nothingToDisplay")</em>
         </div>
 
     } else {
@@ -74,7 +74,7 @@
         <table class="computers zebra-striped">
             <thead>
                 <tr>
-                @header("name", "Type name")
+                @header("name", Messages("name"))
                 </tr>
             </thead>
             <tbody>
@@ -92,23 +92,23 @@
             <ul>
                 @if(currentPage.hasPrev) {
                     <li class="prev">
-                        <a href="@link(currentPage.getPageIndex - 1, null)">&larr; Previous</a>
+                        <a href="@link(currentPage.getPageIndex - 1, null)">&larr; @Messages("previous")</a>
                     </li>
                 } else {
                     <li class="prev disabled">
-                        <a>&larr; Previous</a>
+                        <a>&larr; @Messages("previous")</a>
                     </li>
                 }
                 <li class="current">
-                    <a>Displaying @currentPage.getDisplayXtoYofZ(" to ", " of ")</a>
+                    <a>@Messages("displaying") @currentPage.getDisplayXtoYofZ(" " + play.i18n.Messages.get("to") + " ", " " + play.i18n.Messages.get("of") + " ")</a>
                 </li>
                 @if(currentPage.hasNext) {
                     <li class="next">
-                        <a href="@link(currentPage.getPageIndex + 1, null)">Next &rarr;</a>
+                        <a href="@link(currentPage.getPageIndex + 1, null)">@Messages("next") &rarr;</a>
                     </li>
                 } else {
                     <li class="next disabled">
-                        <a>Next &rarr;</a>
+                        <a>@Messages("next") &rarr;</a>
                     </li>
                 }
             </ul>
