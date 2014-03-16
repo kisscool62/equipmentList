@@ -34,3 +34,7 @@ category.listCategory=Liste des catégories
 event.addEvent=Créer un événement
 
 product.addProduct=Ajouter un matériel
+
+typeOfEquipment.addTypeOfEquipment=Créer un nouveau type de matériel
+typeOfEquipment.typeOfEquipmentCreated=Le type de matériel "%s" a été créé
+typeOfEquipment.typeOfEquipmentNotCreated=Le type de matériel "%s" n'''a pas été créé car il existait déjà

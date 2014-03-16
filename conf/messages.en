@@ -28,9 +28,13 @@ menu.events=Events
 
 category.addCategory=Create a category
 category.categoryCreated=Category "%s" has been created
-category.categoryNotCreated="Category "%s" was not created because exists"
+category.categoryNotCreated=Category "%s" was not created because exists
 category.listCategory=Category list
 
 event.addEvent=Create an event
 
 product.addProduct=Add a product
+
+typeOfEquipment.addTypeOfEquipment=Create a new type of equipment
+typeOfEquipment.typeOfEquipmentCreated=Type of equipment "%s" has been created
+typeOfEquipment.typeOfEquipmentNotCreated=Type of equipment "%s"was not created because exists

@@ -1,5 +1,6 @@
 package controllers;
 
+import helpers.common.Messages;
 import models.TypeOfEquipment;
 import play.data.Form;
 import play.mvc.Controller;
@@ -60,9 +61,9 @@ public class TypeOfEquipmentController extends Controller {
         final TypeOfEquipment typeOfEquipmentCandidate = typeOfEquipmentForm.get();
         final boolean wasSaved = typeOfEquipmentCandidate.saveOrReturnFalseIfExists();
         if(wasSaved){
-            flash("success", "TypeOfEquipment " + typeOfEquipmentCandidate.name + " has been created");
+            flash("success", Messages.get("typeOfEquipment.typeOfEquipmentCreated", typeOfEquipmentCandidate.name));
         }else{
-            flash("error", "TypeOfEquipment " + typeOfEquipmentCandidate.name + " was not created because exists");
+            flash("error", Messages.get("typeOfEquipment.typeOfEquipmentNotCreated", typeOfEquipmentCandidate.name));
         }
         return GO_HOME;
     }

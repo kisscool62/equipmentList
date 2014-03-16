@@ -4,21 +4,21 @@
 
 @implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) } 
 
-@main("Create a new Type Of Equipment") {
+@main(Messages("typeOfEquipment.addTypeOfEquipment")) {
     
-    <h1>Add a type of equipment</h1>
+    <h2>@Messages("typeOfEquipment.addTypeOfEquipment")</h2>
     
     @form(routes.TypeOfEquipmentController.save()) {
         
         <fieldset>
         
-            @inputText(typeOfEquipmentForm("name"), '_label -> "TypeOfEquipment name")
+            @inputText(typeOfEquipmentForm("name"), '_label -> Messages("name"))
 
         </fieldset>
         
         <div class="actions">
-            <input type="submit" value="Create this type of equipment" class="btn primary"> or
-            <a href="@routes.TypeOfEquipmentController.typesOfEquipment()" class="btn">Cancel</a>
+            <input type="submit" value="@Messages("create")" class="btn primary"> @Messages("or")
+            <a href="@routes.TypeOfEquipmentController.typesOfEquipment()" class="btn">@Messages("cancel")</a>
         </div>
         
     }
