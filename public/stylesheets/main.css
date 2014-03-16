@@ -51,10 +51,24 @@ table.computers .header a {
     position: relative;
 }
 
-#actions #add {
-    position: absolute;
-    right: 0;
-    top: 0;
+.default-actions{
+    width: 1200px;
+}
+.default-actions form{
+    margin: 0;
+}
+
+.default-actions fieldset{
+    padding-top: 0;
+    width: 400px;
+    float:left;
+}
+
+
+.name-search{
+    width: 400px;
+    float: left;
+    padding-top: 0;
 }
 
 .deleteAll {
@@ -252,4 +266,12 @@ li{
 	color: blue;
 }
 
+.productUploadForm{
+    width: 450px;
+    padding-left: 50px;
+}
+
+.productUploadForm label{
+     padding-right: 20px;
+}
 

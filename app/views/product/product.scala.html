@@ -56,14 +56,37 @@
 
     <div id="actions">
 
-        <form action="@link(0, "name")" method="GET">
-            <input type="search" id="searchbox" name="f" value="@currentFilter" placeholder="Filter by product name...">
-            <input type="submit" id="searchsubmit" value="Filter by name" class="btn primary">
-        </form>
+        <div class="default-actions floating-right">
+
+            <a class="btn success floating" id="add" href="@routes.ProductController.create()">Add a new product</a>
+
+            @helper.form(action = routes.ProductController.upload, 'enctype -> "multipart/form-data") {
 
 
-        <a class="btn success" id="add" href="@routes.ProductController.create()">Add a new product</a>
+                    <fieldset>
+                        <div class="clearfix productUploadForm">
+                            <label for="choose-file"> Please choose the file</label>
+                            <div class="uploadProductInput">
+                                <input id="choose-file" type="file" name="inventory" class="uneditable-input"/>
+                            </div>
 
+                            <label for="uploadFile"> Please upload the file</label>
+                            <input id="uploadFile" type="submit" value="charger le fichier" class="uneditable-input btn primary"/>
+                            <span class="help-inline"></span>
+                        </div>
+                     </fieldset>
+
+
+            }
+
+                <form action="@link(0, "name")" method="GET">
+                    <div class="name-search">
+                        <input type="search" id="searchbox" name="f" value="@currentFilter" placeholder="@Messages("filterByName")...">
+                        <input type="submit" id="searchsubmit" value="@Messages("filterByName")" class="btn primary">
+                    </div>
+                </form>
+
+        </div>
 
 
     </div>
@@ -71,7 +94,7 @@
     @if(currentPage.getTotalRowCount == 0) {
 
         <div class="well">
-            <em>Nothing to display</em>
+            <em>@Messages("nothingToDisplay")</em>
         </div>
 
     } else {
@@ -92,7 +115,7 @@
                     @header("dateOfPurchase", Messages("dateOfPurchase"))
                     @header("euroPrice", Messages("euroPrice"))
                     @header("usdPrice", Messages("usdPrice"))
-                    <th class="deleteAll"><a href="@routes.ProductController.deleteAll()">Delete all products</a></th>
+                    <th class="deleteAll"><a href="@routes.ProductController.deleteAll()">@Messages("deleteAll")</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -128,23 +151,23 @@
             <ul>
                 @if(currentPage.hasPrev) {
                     <li class="prev">
-                        <a href="@link(currentPage.getPageIndex - 1, null)">&larr; Previous</a>
+                        <a href="@link(currentPage.getPageIndex - 1, null)">&larr; @Messages("previous")</a>
                     </li>
                 } else {
                     <li class="prev disabled">
-                        <a>&larr; Previous</a>
+                        <a>&larr; @Messages("previous")</a>
                     </li>
                 }
                 <li class="current">
-                    <a>Displaying @currentPage.getDisplayXtoYofZ(" to ", " of ")</a>
+                    <a>@Messages("displaying") @currentPage.getDisplayXtoYofZ(" to ", " of ")</a>
                 </li>
                 @if(currentPage.hasNext) {
                     <li class="next">
-                        <a href="@link(currentPage.getPageIndex + 1, null)">Next &rarr;</a>
+                        <a href="@link(currentPage.getPageIndex + 1, null)">@Messages("next") &rarr;</a>
                     </li>
                 } else {
                     <li class="next disabled">
-                        <a>Next &rarr;</a>
+                        <a>@Messages("next") &rarr;</a>
                     </li>
                 }
             </ul>
@@ -152,12 +175,5 @@
 
     }
 
-    @helper.form(action = routes.ProductController.upload, 'enctype -> "multipart/form-data") {
 
-        <input type="file" name="inventory">
-        <p>
-            <input type="submit">
-        </p>
-
-    }
 }

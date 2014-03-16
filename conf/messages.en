@@ -3,6 +3,7 @@ cancel=Cancel
 or=or
 name=Name
 filterByName=Filter by name
+deleteAll=Delete all
 
 nothingToDisplay=Nothing to display
 displaying=Displaying
