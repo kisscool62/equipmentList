@@ -14,24 +14,24 @@
         <th class="header ">@title</th>
     }
 
-@main("Don't forget your equipment!!") {
+@main(Messages("product.selectProductsToPrint")) {
 
     <script language="javascript">
         function uncheckAll() {
-            $("#range_select").val("Check all");
+            $("#range_select").val("@Messages("checkAll")");
             $("#range_select").attr("onclick","checkAll()");
             $("input:checkbox").prop("checked", false);
             $("input:checkbox").removeAttr("checked");
         };
         function checkAll() {
-            $("#range_select").val("Uncheck all");
+            $("#range_select").val("@Messages("none")");
             $("#range_select").attr("onclick","uncheckAll()");
             $("input:checkbox").prop("checked", true);
             $("input:checkbox" ).attr("checked", "checked");
         };
     </script>
 
-    <h1 id="homeTitle">@Messages("products.list.title")</h1>
+    <h2 id="homeTitle">@Messages("product.selectProductsToPrint")</h2>
 
     @if(flash.containsKey("success")) {
         <div class="alert-message success">
@@ -54,50 +54,58 @@
 
     } else {
 
+
+
         @form(routes.ProductController.printPdf()){
-            <table class="computers zebra-striped">
-                <thead>
-                    <tr>
-                        <th class="centered_text"><input id="range_select" class="range_select_button" type="button" value="Check All" onclick="checkAll();"/></th>
-                        @simpleHeader("Product name")
-                        @simpleHeader("Type")
-                        @simpleHeader("Category")
-                        @simpleHeader("Marque")
-                        @simpleHeader("Description")
-                        @simpleHeader("Proprio")
-                        @simpleHeader("Salle")
-                        @simpleHeader("Emplacement")
-                        @simpleHeader("Etat")
-                        @simpleHeader("Date Achat")
-                        @simpleHeader("Prix Achat Unit.")
-                        @simpleHeader("USD")
-                    </tr>
-                </thead>
-                <tbody>
+            <input type="submit" value="@Messages("product.printAsPDF")" class="btn primary">
+            <div  class="productToPrintBody">
+                <table class="computers zebra-striped">
+                    <thead>
+                        <tr>
+                            <th class="centered_text"><input id="range_select" class="range_select_button btn primary" type="button" value="@Messages("checkAll")" onclick="checkAll();"/></th>
+                            @simpleHeader(Messages("name"))
+                            @simpleHeader(Messages("typeOfEquipment"))
+                            @simpleHeader(Messages("category"))
+                            @simpleHeader(Messages("brand"))
+                            @simpleHeader(Messages("description"))
+                            @simpleHeader(Messages("quantity"))
+                            @simpleHeader(Messages("owner"))
+                            @simpleHeader(Messages("room"))
+                            @simpleHeader(Messages("location"))
+                            @simpleHeader(Messages("state"))
+                            @simpleHeader(Messages("dateOfPurchase"))
+                            @simpleHeader(Messages("euroPrice"))
+                            @simpleHeader(Messages("usdPrice"))
+                        </tr>
+                    </thead>
 
-                @for(product <- products) {
-                    <tr>
-                        <td class="centered_text"><input id="@product.id" name="product-@product.id" type="checkbox" value="false"/></td>
-                        <td>@product.name</td>
-                        <td>@product.typeOfEquipment.name</td>
-                        <td>@product.category.name</td>
-                        @if(product.brand == null){<td></td>}
-                        @if(product.brand != null){<td>@product.brand.name</td>}
-                        <td>@product.description</td>
-                        <td>@product.owner</td>
-                        <td>@product.room</td>
-                        <td>@product.location</td>
-                        <td>@product.state</td>
-                        <td>@product.dateOfPurchase</td>
-                        <td>@product.euroPrice</td>
-                        <td>@product.usdPrice</td>
-                    </tr>
-                }
 
-                </tbody>
-            </table>
+                    <tbody>
 
-            <input type="submit" value="Print list as PDF" class="btn primary">
+                    @for(product <- products) {
+                        <tr>
+                            <td class="centered_text"><input id="@product.id" name="product-@product.id" type="checkbox" value="false"/></td>
+                            <td>@product.name</td>
+                            <td>@product.typeOfEquipment.name</td>
+                            <td>@product.category.name</td>
+                            @if(product.brand == null){<td></td>}
+                            @if(product.brand != null){<td>@product.brand.name</td>}
+                            <td>@product.description</td>
+                            <td>@product.quantity</td>
+                            <td>@product.owner</td>
+                            <td>@product.room</td>
+                            <td>@product.location</td>
+                            <td>@product.state</td>
+                            <td>@product.dateOfPurchase</td>
+                            <td>@product.euroPrice</td>
+                            <td>@product.usdPrice</td>
+                        </tr>
+                    }
+
+                    </tbody>
+
+                </table>
+            </div>
 
         }
     }

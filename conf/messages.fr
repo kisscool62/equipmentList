@@ -4,6 +4,8 @@ or=ou
 name=Nom
 filterByName=Filtrer par nom
 deleteAll=Supprimer tous
+checkAll=Tous
+none=Aucun
 
 nothingToDisplay=Rien à afficher
 displaying=Affiche
@@ -41,6 +43,8 @@ product.addProduct=Ajouter un matériel
 product.productCreated=Le matériel "%s" a été créé
 product.productNotCreated=Le matériel "%s" n'''a pas été créé car il existait déjà
 product.listProducts=Liste des différents matériels
+product.selectProductsToPrint=Sélectionner les matériels à emporter
+product.printAsPDF=Imprimer en PDF
 
 typeOfEquipment.addTypeOfEquipment=Créer un nouveau type de matériel
 typeOfEquipment.typeOfEquipmentCreated=Le type de matériel "%s" a été créé

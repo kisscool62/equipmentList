@@ -64,6 +64,10 @@ table.computers .header a {
     float:left;
 }
 
+.productToPrintBody{
+    height: 850px;
+    overflow-y: scroll;
+}
 
 .name-search{
     width: 400px;

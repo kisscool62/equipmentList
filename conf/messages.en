@@ -4,6 +4,8 @@ or=or
 name=Name
 filterByName=Filter by name
 deleteAll=Delete all
+checkAll=Check All
+none=Uncheck All
 
 nothingToDisplay=Nothing to display
 displaying=Displaying
@@ -38,6 +40,10 @@ category.listCategory=Category list
 event.addEvent=Create an event
 
 product.addProduct=Add a product
+product.productCreated=Product %s has been created
+product.listProducts=Product list
+product.selectProductsToPrint=Select products to bring
+product.printAsPDF=Print list as PDF
 
 typeOfEquipment.addTypeOfEquipment=Create a new type of equipment
 typeOfEquipment.typeOfEquipmentCreated=Type of equipment "%s" has been created
