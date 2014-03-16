@@ -3,6 +3,7 @@ package controllers;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import helpers.common.Messages;
 import helpers.excel.ProductUploader;
 import models.Product;
 import models.SelectableProduct;
@@ -38,7 +39,7 @@ public class ProductController extends Controller {
     /**
      * This result directly redirect to application home.
      */
-    public static Result GO_HOME = redirect(routes.Application.index());
+    public static Result GO_HOME = redirect(routes.ProductController.products(0, "name", "asc", ""));
 
     /**
      * Display the paginated list of products.
@@ -150,9 +151,10 @@ public class ProductController extends Controller {
             return badRequest(views.html.product.createForm.render(productForm));
         }
         final Product productCandidate = productForm.get();
-        productCandidate.save();
 
-        flash("success", "Product " + productCandidate.name + " has been created");
+        productCandidate.save();
+        flash("success", Messages.get("product.productCreated", productCandidate.name));
+
 
         return GO_HOME;
     }

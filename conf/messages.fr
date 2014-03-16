@@ -17,8 +17,8 @@ brand=Marque
 description=Description
 quantity=Quantité
 owner=Propriétaire
-room=Bureau
-location=Où
+room=Salle
+location=Emplacement
 state=Etat
 dateOfPurchase=Date d'''achat
 euroPrice=Prix EUR
@@ -37,6 +37,9 @@ category.listCategory=Liste des catégories
 event.addEvent=Créer un événement
 
 product.addProduct=Ajouter un matériel
+product.productCreated=Le matériel "%s" a été créé
+product.productNotCreated=Le matériel "%s" n'''a pas été créé car il existait déjà
+product.listProducts=Liste des différents matériels
 
 typeOfEquipment.addTypeOfEquipment=Créer un nouveau type de matériel
 typeOfEquipment.typeOfEquipmentCreated=Le type de matériel "%s" a été créé
